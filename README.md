@@ -1,5 +1,7 @@
 # Your CR — Manage Your Semester, Seamlessly.
 
+![Your CR Banner](./public/assets/yourcr-logo.png)
+
 **Your CR** is a comprehensive, high-performance semester management platform built specifically for university students and Class Representatives (CRs). It centralizes classes, exams, assignments, routines, and notices into one beautifully designed, lightning-fast dashboard.
 
 ---
@@ -7,6 +9,15 @@
 ## 🚀 Tech Stack
 
 Built with cutting-edge web technologies to ensure maximum performance, scalability, and an exceptional developer experience:
+
+
+![Next.js 15](https://img.shields.io/badge/Next.js%2015-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Cloudflare Workers](https://img.shields.io/badge/Cloudflare_Workers-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
+![OpenNext](https://img.shields.io/badge/OpenNext-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Shadcn UI](https://img.shields.io/badge/Shadcn_UI-000000?style=for-the-badge&logo=shadcnui&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
 
 ### Core Frameworks & Deployment
 - **Framework:** [Next.js 15 (App Router)](https://nextjs.org/)
