@@ -22,9 +22,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      suppressHydrationWarning 
     >
       <body
+        suppressHydrationWarning
         className={`${notoSansBengali.variable} font-sans bg-background text-foreground antialiased min-h-screen flex flex-col`}
       >
           {children}
