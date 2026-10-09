@@ -47,7 +47,7 @@
   --radius-sm: calc(var(--radius) - 4px);
   --shadow-popover: 0 0 20px 5px rgba(0, 0, 0, 0.12);
   /* --- 8. Typography --- */
-  --font-family: var(--font-sans);
+  --font-sans: var(--font-sans), "Noto Sans Bengali", sans-serif;
 }
 
 @layer base {
@@ -184,5 +184,31 @@
   ::-webkit-scrollbar-thumb {
     background: var(--border);
     border-radius: 9999px;
+  }
+}
+
+/* ==========================================================
+   Utility Classes
+   ========================================================== */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
