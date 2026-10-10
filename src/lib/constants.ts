@@ -25,6 +25,7 @@ export const HOW_IT_WORKS_STEPS: StepItem[] = [
   },
 ];
 
+
 // Role cards data for the How It Works section
 export const HOW_IT_WORKS_ROLE_CARDS: RoleCardItem[] = [
   {
@@ -53,3 +54,17 @@ export const HOW_IT_WORKS_ROLE_CARDS: RoleCardItem[] = [
   },
 ];
 
+import { MapLocation } from "@/types/map";
+
+export const INSTITUTION_LOCATIONS: MapLocation[] = [
+  { id: "1", name: "Dhaka University", coordinates: [90.3959, 23.7323] },
+  { id: "2", name: "BUET", coordinates: [90.3927, 23.7266] },
+  { id: "3", name: "Rajshahi University", coordinates: [88.6366, 24.3698] },
+  { id: "4", name: "Chittagong University", coordinates: [91.7825, 22.4705] },
+  { id: "5", name: "Sylhet Agricultural University", coordinates: [91.9022, 24.9048] },
+  { id: "6", name: "Khulna University", coordinates: [89.5403, 22.8020] },
+  { id: "7", name: "MIT", coordinates: [-71.0942, 42.3601] },
+  { id: "8", name: "Oxford", coordinates: [-1.2577, 51.7520] },
+  { id: "9", name: "University of Sydney", coordinates: [151.1873, -33.8879] },
+  { id: "10", name: "University of Tokyo", coordinates: [139.7621, 35.7126] }
+];
