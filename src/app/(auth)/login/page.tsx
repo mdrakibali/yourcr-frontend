@@ -12,7 +12,7 @@ const LoginPage = () => {
       <div className="mx-auto w-full max-w-lg border border-gray-200 rounded-lg p-6">
         {/* Text Content */}
         <div className="mb-8 text-center">
-          <h1 className="mb-2 text-xl leading-tight tracking-tight text-gray-900">
+          <h1 className="mb-2 text-xl md:text-2xl font-semibold leading-tight tracking-tight text-gray-900">
             Login to Your Account
           </h1>
           <p className="text-xs text-gray-500">

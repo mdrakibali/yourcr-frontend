@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { FormInput } from "@/components/ui/form-input";
+import { GoogleAuthButton } from "@/components/auth/google-auth-button";
 import { registerUser, type AuthActionState } from "@/services/auth.service";
 import { Lock, Mail, User } from "lucide-react";
 import Link from "next/link";
@@ -80,9 +81,7 @@ const RegisterForm = () => {
       </div>
       
       <div className="mt-6 flex flex-col gap-3">
-        <Button variant="outline" className="w-full h-10 text-[13px] border-gray-200 text-gray-700 font-semibold hover:bg-gray-50 shadow-none">
-          Google
-        </Button>
+        <GoogleAuthButton />
       </div>
 
       <p className="mt-8 text-center text-xs text-gray-600">

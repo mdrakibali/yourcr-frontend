@@ -4,6 +4,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { FormInput } from "@/components/ui/form-input";
 import { Label } from "@/components/ui/label";
 import { Modal } from "@/components/ui/modal";
+import { GoogleAuthButton } from "@/components/auth/google-auth-button";
 import { loginUser, type AuthActionState } from "@/services/auth.service";
 import { getDefaultDashboardRoute } from "@/utils/auth-utils";
 import { Clock, Lock, Mail } from "lucide-react";
@@ -169,9 +170,7 @@ const LoginForm = () => {
       
       {/* Social Login Buttons (Mock) */}
       <div className="mt-6 flex flex-col gap-3">
-        <Button variant="outline" className="w-full h-10 text-[13px] border-gray-200 text-gray-700 font-semibold hover:bg-gray-50 shadow-none">
-          Google
-        </Button>
+        <GoogleAuthButton />
       </div>
 
       <p className="mt-8 text-center text-xs text-gray-600">
