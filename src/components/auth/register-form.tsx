@@ -1,6 +1,8 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { FormInput } from "@/components/ui/form-input";
+import { Label } from "@/components/ui/label";
 import { GoogleAuthButton } from "@/components/auth/google-auth-button";
 import { registerUser, type AuthActionState } from "@/services/auth.service";
 import { Lock, Mail, User } from "lucide-react";
@@ -65,6 +67,34 @@ const RegisterForm = () => {
             className="bg-card border-gray-200"
           />
         </div>
+        
+        <div className="flex flex-col gap-1.5 py-1">
+          <div className="flex items-start space-x-2">
+            <Checkbox
+              id="acceptTerms"
+              name="acceptTerms"
+              defaultChecked={state.inputs?.acceptTerms === "on"}
+              className="mt-0.5 border-gray-300 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+            />
+            <Label
+              htmlFor="acceptTerms"
+              className="text-xs font-medium text-gray-600 cursor-pointer select-none leading-relaxed"
+            >
+              I accept the{" "}
+              <Link href="/terms" className="font-bold text-primary hover:underline">
+                Terms and Conditions
+              </Link>{" "}
+              and{" "}
+              <Link href="/privacy" className="font-bold text-primary hover:underline">
+                Privacy Policy
+              </Link>
+            </Label>
+          </div>
+          {state.errors?.acceptTerms && (
+            <p className="text-xs text-red-500 mt-0.5">{state.errors.acceptTerms[0]}</p>
+          )}
+        </div>
+
         <Button
           type="submit"
           className="w-full h-10 text-[13px] font-bold bg-primary hover:bg-primary/90 text-white rounded-md transition-all active:scale-[0.98] cursor-pointer disabled:opacity-70 shadow-none"

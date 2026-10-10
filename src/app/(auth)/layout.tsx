@@ -11,7 +11,7 @@ export default function AuthLayout({
   return (
     <div className="h-dvh overflow-y-auto bg-card flex flex-col relative">
       {/* Auth Navbar */}
-      <header className="w-full shrink-0border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-10">
+      <header className="w-full container mx-auto shrink-0border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-10">
 
         <Link href="/">
           <Image
