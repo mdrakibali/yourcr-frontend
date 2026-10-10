@@ -50,7 +50,7 @@ const ResetPasswordForm = () => {
 
         <Button
           type="submit"
-          className="w-full h-10 text-[13px] font-bold bg-primary hover:bg-primary/90 text-white rounded-md transition-all active:scale-[0.98] cursor-pointer disabled:opacity-70"
+          className="w-full h-10 text-[13px] font-bold bg-primary hover:bg-primary/90 text-white rounded-md transition-all active:scale-[0.98] cursor-pointer disabled:opacity-70 shadow-none"
           disabled={isPending}
         >
           {isPending ? "Resetting..." : "Reset Password"}

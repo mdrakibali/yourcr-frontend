@@ -88,7 +88,7 @@ const LoginForm = () => {
           <div className="w-full pt-2">
             <Button
               onClick={() => setIsPendingModalOpen(false)}
-              className="w-full h-10 text-[13px] bg-primary cursor-pointer text-white font-semibold rounded-md transition-all active:scale-[0.98]"
+              className="w-full h-10 text-[13px] bg-primary cursor-pointer text-white font-semibold rounded-md transition-all active:scale-[0.98] shadow-none"
             >
               Continue
             </Button>
@@ -146,7 +146,7 @@ const LoginForm = () => {
 
         <Button
           type="submit"
-          className="w-full h-10 text-[13px] font-bold bg-primary hover:bg-primary/90 text-white rounded-md transition-all active:scale-[0.98] cursor-pointer disabled:opacity-70"
+          className="w-full h-10 text-[13px] font-bold bg-primary hover:bg-primary/90 text-white rounded-md transition-all active:scale-[0.98] cursor-pointer disabled:opacity-70 shadow-none"
           disabled={isPending}
         >
           {isPending ? (
@@ -169,7 +169,7 @@ const LoginForm = () => {
       
       {/* Social Login Buttons (Mock) */}
       <div className="mt-6 flex flex-col gap-3">
-        <Button variant="outline" className="w-full h-10 text-[13px] border-gray-200 text-gray-700 font-semibold hover:bg-gray-50">
+        <Button variant="outline" className="w-full h-10 text-[13px] border-gray-200 text-gray-700 font-semibold hover:bg-gray-50 shadow-none">
           Google
         </Button>
       </div>

@@ -1,8 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { FormInput } from "@/components/ui/form-input";
+import { OtpInput } from "@/components/ui/otp-input";
 import { verifyOtp, type AuthActionState } from "@/services/auth.service";
-import { KeyRound } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { VERIFY_OTP_INITIAL_STATE } from "@/constants/auth.constants";
 import { useActionState, useEffect } from "react";
@@ -22,21 +21,19 @@ const VerifyOtpForm = () => {
   return (
     <form action={formAction} noValidate className="space-y-5">
         <div className="flex flex-col gap-4">
-          <FormInput
+          <OtpInput
             id="otp"
             name="otp"
             label="One Time Password (OTP)"
-            icon={KeyRound}
-            placeholder="123456"
+            length={6}
             defaultValue={state.inputs?.otp}
             error={state.errors?.otp}
-            className="bg-card border-gray-200"
           />
         </div>
 
         <Button
           type="submit"
-          className="w-full h-10 text-[13px] font-bold bg-primary hover:bg-primary/90 text-white rounded-md transition-all active:scale-[0.98] cursor-pointer disabled:opacity-70"
+          className="w-full h-10 text-[13px] font-bold bg-primary hover:bg-primary/90 text-white rounded-md transition-all active:scale-[0.98] cursor-pointer disabled:opacity-70 shadow-none"
           disabled={isPending}
         >
           {isPending ? "Verifying..." : "Verify OTP"}
