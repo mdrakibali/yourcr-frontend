@@ -1,0 +1,72 @@
+import React from 'react';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { Play } from 'lucide-react';
+export function HeroSection() {
+  return (
+    <section className="relative overflow-hidden pt-24 pb-8 lg:pt-32 lg:pb-16">
+      {/* Background Grid Pattern */}
+      <div
+        className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#8080801a_1px,transparent_1px),linear-gradient(to_bottom,#8080801a_1px,transparent_1px)]"
+        style={{
+          backgroundSize: '60px 60px',
+          maskImage: 'linear-gradient(to bottom, white 20%, transparent 80%)',
+          WebkitMaskImage:
+            'linear-gradient(to bottom, white 20%, transparent 80%)',
+        }}
+      />
+      {/* Primary Color Glow Blob */}
+      <div className="bg-primary/20 pointer-events-none absolute top-0 left-1/2 z-0 h-75 w-full max-w-lg -translate-x-1/2 rounded-full opacity-70 blur-[100px] md:h-100 md:max-w-3xl md:blur-[120px]" />
+
+      <div className="relative z-10 container flex flex-col items-center text-center">
+        {/* Badge */}
+        <div className="border-primary/30 bg-primary/5 mb-8 inline-flex items-center rounded-full border px-4 py-1.5">
+          <span className="text-primary text-xs font-bold tracking-widest uppercase">
+            Built for CRs & Students
+          </span>
+        </div>
+        {/* Heading */}
+        <h1 className="text-foreground mb-6 max-w-4xl text-4xl leading-[1.15] font-bold tracking-tight text-balance md:text-5xl">
+          Stop scrolling through chats. <br className="hidden sm:block" />
+          Start managing with{' '}
+          <span className="from-primary to-brand-orange bg-linear-to-br bg-clip-text text-transparent">
+            Your CR.
+          </span>
+        </h1>
+        {/* Sub-heading */}
+        <p className="text-muted-foreground mb-10 max-w-3xl text-base leading-relaxed text-balance">
+          The ultimate workspace for Class Representatives and students. Keep
+          routines, announcements, and study materials perfectly organized in
+          one place.
+        </p>
+        {/* Buttons */}
+        <div className="flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row">
+          <Button className="w-full px-6 font-semibold sm:w-auto">
+            Get Started
+          </Button>
+          <Button
+            variant="ghost"
+            className="hover:text-primary group border-border text-primary w-full border px-4 font-semibold hover:bg-transparent sm:w-auto"
+          >
+            <Play className="ml-0.5 h-3 w-3 fill-current" />
+            How It Works
+          </Button>
+        </div>
+
+        {/* Dashboard Mockup Image */}
+        <div className="relative mx-auto mt-12 w-full max-w-4xl sm:mt-16">
+          <div className="border-border/50 bg-muted relative overflow-hidden rounded-xl border shadow-2xl sm:rounded-2xl">
+            <Image
+              src="/assets/hero-mockup.png"
+              alt="Your CR Dashboard Mockup"
+              width={1200}
+              height={500}
+              priority
+              className="h-auto w-full object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

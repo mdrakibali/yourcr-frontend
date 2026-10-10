@@ -2,136 +2,148 @@
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
-  /* Colors */
-  --color-primary: var(--primary);
-  --color-primary-hover: var(--primary-hover);
-  --color-primary-soft: var(--primary-soft);
-  --color-bg: var(--bg);
-  --color-surface: var(--surface);
-  --color-surface-soft: var(--surface-soft);
-  --color-border: var(--border);
-  --color-text: var(--text);
-  --color-muted: var(--muted);
-  --color-teal: var(--teal);
-  --color-teal-soft: var(--teal-soft);
-  --color-rose: var(--rose);
-  --color-rose-soft: var(--rose-soft);
-  --color-amber: var(--amber);
-  --color-amber-soft: var(--amber-soft);
-  --color-indigo: var(--indigo);
-  --color-indigo-soft: var(--indigo-soft);
-  --color-green: var(--green);
-
+  /* --- 1. Surfaces & Backgrounds --- */
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
+
+  /* --- 2. Text (Foregrounds) --- */
+  --color-foreground: var(--foreground);
+  --color-card-foreground: var(--card-foreground);
   --color-popover-foreground: var(--popover-foreground);
+
+  /* --- 3. Accents & Buttons (Shadcn Standards) --- */
+  --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-placeholder: var(--placeholder);
+
+  /* --- 4. Borders & Inputs --- */
+  --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+  /* --- 5. Custom Brand Colors (Landing Page) --- */
+  --color-brand-orange: #f37c20; /* "Future of Education" highlight */
+  --color-brand-teal: #007b88;
 
-  /* Shadows & Radius */
-  --shadow-default: var(--shadow);
-  --radius-md: var(--radius);
+  /* --- 6. Custom Pastel Colors (Dashboard Course Cards) --- */
+  --color-pastel-blue: var(--pastel-blue);
+  --color-pastel-yellow: var(--pastel-yellow);
+  --color-pastel-pink: var(--pastel-pink);
+  --color-pastel-green: var(--pastel-green);
 
-  /* Fonts */
-  --font-sans: var(--font-sans), var(--font-inter), sans-serif;
-  --font-bangla: var(--font-bangla), 'Hind Siliguri', sans-serif;
-  --font-inter: var(--font-inter), sans-serif;
-  --font-heading: var(--font-heading), 'Plus Jakarta Sans', sans-serif;
+  /* --- 7. Design System Utilities --- */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --shadow-popover: 0 0 20px 5px rgba(0, 0, 0, 0.12);
+  /* --- 8. Typography --- */
+  --font-sans: var(--font-sans), 'Noto Sans Bengali', sans-serif;
 }
 
-:root {
-  color-scheme: light;
-  --primary: oklch(0.205 0 0);
-  --primary-hover: #115e59;
-  --primary-soft: #ccfbf1;
-  --bg: #f7f8f6;
-  --surface: #ffffff;
-  --surface-soft: #f0f8f6;
-  --border: oklch(0.922 0 0);
-  --text: #0f172a;
-  --muted: oklch(0.97 0 0);
-  --teal: #0f766e;
-  --teal-soft: #ccfbf1;
-  --rose: #be123c;
-  --rose-soft: #ffe4e6;
-  --amber: #b45309;
-  --amber-soft: #fef3c7;
-  --indigo: #4338ca;
-  --indigo-soft: #e0e7ff;
-  --green: #15803d;
-  --shadow: 0 8px 24px rgba(15, 23, 42, 0.045);
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
+@layer base {
+  :root {
+    /* --- Light Mode (Clean & Modern Dashboard) --- */
+    --background: #f4f6f8; /* Dashboard canvas (halka gray) */
+    --foreground: #0f172a; /* Dark text */
 
-.dark {
-  color-scheme: dark;
-  --bg: #0b1210;
-  --surface: #121c19;
-  --surface-soft: #14231f;
-  --border: #1f2e2a;
-  --text: #e8efec;
-  --muted: #8fa39c;
-  --primary: #2dd4bf;
-  --primary-hover: #5eead4;
-  --teal: #2dd4bf;
-  --teal-soft: #173f39;
-  --rose-soft: #48202c;
-  --amber-soft: #46371c;
-  --indigo-soft: #252b4c;
-  --green: #4ade80;
-  --shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
-}
+    --card: #ffffff;
+    --card-foreground: #0f172a;
 
+    --popover: #ffffff;
+    --popover-foreground: #0f172a;
+
+    /* Primary: Dark Teal (Landing Page) */
+    --primary: #007b88;
+    --primary-foreground: #ffffff;
+
+    /* Secondary: Soft gray/blue for secondary buttons */
+    --secondary: #e2e8f0;
+    --secondary-foreground: #0f172a;
+
+    /* Muted: Disabled states & subtle backgrounds */
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+
+    /* Accent: Shadcn uses this for hover states (e.g., dropdowns) */
+    --accent: #f1f5f9;
+    --accent-foreground: #0f172a;
+
+    /* Destructive: For delete/error buttons */
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+
+    --placeholder: #94a3b8;
+
+    /* Borders & Rings */
+    --border: #007b88;
+    --input: #e2e8f0;
+    --ring: #007b88; /* Input focus korলে Teal color */
+
+    /* Pastel Backgrounds for Dashboard Cards */
+    --pastel-blue: #ebf4ff;
+    --pastel-yellow: #fffbeb;
+    --pastel-pink: #fce7f3;
+    --pastel-green: #d1fae5;
+
+    /* Global Border Radius for Shadcn components */
+    --radius: 0.75rem; /* 12px for softer, modern edges */
+  }
+
+  .dark {
+    /* --- Tinted Dark Mode (Premium Greenish-Teal Look) --- */
+    --background: #152522; /* Main dark greenish background */
+    --foreground: #f8fafc; /* Off-white text */
+
+    --card: #1c322e; /* Floating card background */
+    --card-foreground: #f8fafc;
+
+    --popover: #1c322e; /* Dropdown menus */
+    --popover-foreground: #f8fafc;
+
+    /* Primary: Bright Mint/Cyan for pop */
+    --primary: #3bdcb3;
+    --primary-foreground: #022c22; /* Dark text on mint button */
+
+    /* Secondary: Muted dark green */
+    --secondary: #243f3a;
+    --secondary-foreground: #3bdcb3;
+
+    /* Muted */
+    --muted: #243f3a;
+    --muted-foreground: #94a3b8;
+
+    /* Accent (Hover background) */
+    --accent: #2e4a45;
+    --accent-foreground: #f8fafc;
+
+    /* Destructive */
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+
+    --placeholder: #738a86;
+
+    /* Borders & Rings */
+    --border: #2e4a45;
+    --input: #2e4a45;
+    --ring: #3bdcb3; /* Input focus korলে Mint color */
+
+    /* Pastel colors transparent adjusted for Dark Mode */
+    --pastel-blue: rgba(235, 244, 255, 0.05);
+    --pastel-yellow: rgba(255, 251, 235, 0.05);
+    --pastel-pink: rgba(252, 231, 243, 0.05);
+    --pastel-green: rgba(209, 250, 229, 0.05);
+  }
+}
 @layer base {
   *,
   *::before,
@@ -140,15 +152,19 @@
   }
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 88px;
-    background-color: var(--bg);
+    background-color: var(--background);
     color-scheme: light;
+    height: 100dvh;
+    overflow: hidden;
+    scrollbar-gutter: stable;
+    font-family: var(--font-family);
   }
   body {
+    height: 100dvh;
+    overflow: hidden;
     margin: 0;
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: var(--font-sans);
+    background-color: var(--background);
+    color: var(--foreground);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -166,7 +182,26 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: var(--border);
+    background: #d1d5db; /* soft gray matching the image */
     border-radius: 9999px;
+  }
+}
+
+/* ==========================================================
+   Utility Classes
+   ========================================================== */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
