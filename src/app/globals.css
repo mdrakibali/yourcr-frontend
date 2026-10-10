@@ -85,7 +85,7 @@
     --placeholder: #94a3b8;
 
     /* Borders & Rings */
-    --border: var(--primary);
+    --border: #e2e8f0;
     --input: #e2e8f0;
     --ring: #007B88; /* Input focus korলে Teal color */
 
@@ -133,7 +133,7 @@
     --placeholder: #738a86;
 
     /* Borders & Rings */
-    --border: var(--primary);
+    --border: #2e4a45;
     --input: #2e4a45;
     --ring: #3bdcb3; /* Input focus korলে Mint color */
 
@@ -195,14 +195,14 @@
   max-width: 1220px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 @media (min-width: 768px) {
   .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 

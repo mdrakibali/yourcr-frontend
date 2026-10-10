@@ -40,7 +40,7 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 inset-x-0 z-50 transition-all duration-500 ease-in-out px-4 sm:px-6 lg:px-8",
+        "fixed top-0 inset-x-0 z-50 transition-all duration-500 ease-in-out",
         isScrolled ? "pt-2" : "pt-4"
       )}
     >
@@ -48,7 +48,7 @@ export function Navbar() {
         className={cn(
           "mx-auto w-full flex items-center justify-between transition-all duration-500 ease-in-out",
           isScrolled
-            ? "max-w-4xl bg-background/70 backdrop-blur-lg shadow-sm border border-border rounded-full py-2 px-6"
+            ? "max-w-4xl bg-background/70 backdrop-blur-lg rounded-full py-2 px-6"
             : "container bg-transparent py-4"
         )}
       >

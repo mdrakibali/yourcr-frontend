@@ -26,7 +26,7 @@ export function MobileNav({ navLinks }: MobileNavProps) {
       >
         <Menu size={24} />
       </SheetTrigger>
-      <SheetContent side="right" className="w-75 sm:w-100 border-l-border">
+      <SheetContent side="right" className="w-75 sm:w-100 border-l-border p-6">
         <SheetHeader className="text-left mb-6 mt-4">
           <SheetTitle>
             <Image
