@@ -211,3 +211,11 @@ export const FEATURES: Feature[] = [
   },
 ];
 
+export const AVATARS = [
+  "https://i.pravatar.cc/150?u=1",
+  "https://i.pravatar.cc/150?u=2",
+  "https://i.pravatar.cc/150?u=3",
+  "https://i.pravatar.cc/150?u=4",
+  "https://i.pravatar.cc/150?u=5",
+];
+
