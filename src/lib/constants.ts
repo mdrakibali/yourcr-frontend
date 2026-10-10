@@ -224,23 +224,23 @@ export const AVATARS = [
 
 export const FAQS: Faq[] = [
   {
-    question: "What Kind Of Courses And Subjects Does Your Platform Offer?",
-    answer: "Our Platform Offers A Wide Range Of Courses Covering Various Subjects, Including STEM, Humanities, Languages, And Arts. We Continually Update And Expand Our Course Offerings To Meet The Evolving Needs Of Learners Of All Ages."
+    question: "How can I invite my classmates to join our class?",
+    answer: "You can easily invite your classmates by sharing a unique invite link or class code generated from your dashboard. Once they sign up using the link, they will be automatically added to your class."
   },
   {
-    question: "Can The Platform Be Integrated With Existing School Systems?",
-    answer: "Yes, our platform is designed to easily integrate with existing school management systems and popular communication tools like WhatsApp and Telegram to ensure seamless updates."
+    question: "Does the app send notifications for schedule changes?",
+    answer: "Yes! Whenever a Class Representative (CR) updates the schedule, adds an assignment, or makes an announcement, all students in the class receive instant notifications."
   },
   {
-    question: "How Does The Platform Ensure The Safety And Privacy Of Its Users?",
-    answer: "We employ industry-standard encryption and strict access controls. Only verified CRs and students can access class-specific data, and no personal information is shared with third parties."
+    question: "Can students upload and share their own class notes?",
+    answer: "Currently, only CRs and assigned admins can upload official resources and notes to ensure accuracy. However, students can request to add materials through the built-in request system."
   },
   {
-    question: "Is The Platform Suitable For All Grades And Levels Of Education?",
-    answer: "Absolutely. Whether you are in high school, college, or university, Your CR provides flexible tools tailored for managing academic schedules and resources effectively."
+    question: "Is 'Your CR' free to use for students?",
+    answer: "Yes, the platform is completely free for students. Our core features for class management, schedules, and announcements are available to all users at no cost."
   },
   {
-    question: "What Kind Of Support And Training Do You Provide For New Users?",
-    answer: "We offer comprehensive onboarding guides, video tutorials, and 24/7 customer support to help you set up and get the most out of your class management dashboard."
+    question: "Can I manage multiple classes at the same time?",
+    answer: "Absolutely. If you are a CR for multiple courses or a student enrolled in different departments, you can switch between all your active classes from a single unified dashboard."
   }
 ];

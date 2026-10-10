@@ -6,6 +6,8 @@ import { MapSection } from "@/components/main/map-section";
 import { TestimonialSection } from "@/components/main/testimonial-section";
 import { FaqSection } from "@/components/main/faq-section";
 import { CtaSection } from "@/components/main/cta-section";
+import { ContactSection } from "@/components/main/contact-section";
+
 export default function Home() {
   return (
     <section>
@@ -17,6 +19,7 @@ export default function Home() {
       <TestimonialSection />
       <CtaSection />
       <FaqSection />
+      <ContactSection />
     </section>
   );
 }
