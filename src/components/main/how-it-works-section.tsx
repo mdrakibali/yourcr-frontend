@@ -7,7 +7,7 @@ import { RoleCard } from "@/components/main/role-card";
 // Main section component explaining how the platform works
 export function HowItWorksSection(): React.JSX.Element {
   return (
-    <section className="w-full py-12 md:py-16 xl:py-20 bg-card relative overflow-hidden">
+    <section id="how-it-works" className="w-full py-12 md:py-16 xl:py-20 bg-card relative overflow-hidden">
       <div className="container relative z-10 px-4 md:px-6 mx-auto">
         {/* Top Section - Steps */}
         <div className="flex flex-col items-start text-left max-w-2xl mb-16">

@@ -10,7 +10,7 @@ export function TestimonialSection() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <section className="py-12 md:py-16 xl:py-20 bg-card relative overflow-hidden">
+    <section id="testimonial" className="py-12 md:py-16 xl:py-20 bg-card relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-start text-left max-w-2xl mb-16">
           <span className="text-[10px] md:text-xs font-bold tracking-widest text-primary uppercase mb-2">
