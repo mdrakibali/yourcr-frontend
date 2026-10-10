@@ -21,12 +21,7 @@ export function Navbar() {
     if (!scrollContainer) return;
 
     const handleScroll = () => {
-      // Only trigger glassmorphism on desktop/tablet (>= 768px)
-      if (window.innerWidth >= 768) {
-        setIsScrolled(scrollContainer.scrollTop > 20);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(scrollContainer.scrollTop > 20);
     };
 
     // Check scroll position on mount
@@ -52,7 +47,7 @@ export function Navbar() {
         className={cn(
           'mx-auto h-14 w-full transition-all duration-500 ease-in-out',
           isScrolled
-            ? 'bg-background/70 flex max-w-4xl items-center justify-between rounded-full px-6 backdrop-blur-lg'
+            ? 'bg-background/70 flex max-w-4xl w-[92%] md:w-full items-center justify-between rounded-full px-6 backdrop-blur-lg'
             : 'container flex items-center justify-between gap-3 bg-transparent'
         )}
       >

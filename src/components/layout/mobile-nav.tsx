@@ -43,28 +43,28 @@ export function MobileNav({ navLinks }: MobileNavProps) {
             <Image
               src="/assets/yourcr-logo.png"
               alt="YourCR Logo"
-              width={140}
+              width={150}
               height={40}
-              className="h-8 w-auto object-contain"
+              className="h-10 w-auto object-contain"
             />
           </SheetTitle>
         </SheetHeader>
-        <nav className="flex flex-col gap-2">
+        <nav className="flex flex-col gap-1">
           {navLinks.map((link) => (
             <NavItem
               key={link.label}
               href={link.href}
               label={link.label}
               onClick={() => setIsOpen(false)}
-              className="hover:bg-muted block rounded-xl px-4 py-3 text-base"
+              className="hover:bg-muted block rounded-xl px-4 py-2 text-base"
             />
           ))}
         </nav>
-        <div className="mt-6 flex flex-col gap-3 pt-6">
+        <div className="mt-6 flex flex-col gap-3 pt-6 border-t border-border/40">
           <Link href="/login" onClick={() => setIsOpen(false)}>
             <Button
               variant="ghost"
-              className="text-foreground border-border w-full justify-center rounded-md border py-6 text-base"
+              className="text-foreground border-border w-full justify-center rounded-md border py-5 text-base"
             >
               Login
             </Button>
@@ -72,7 +72,7 @@ export function MobileNav({ navLinks }: MobileNavProps) {
           <Link href="/register" onClick={() => setIsOpen(false)}>
             <Button
               variant="default"
-              className="w-full justify-center rounded-md py-6 text-base"
+              className="w-full justify-center rounded-md py-5 text-base"
             >
               Register
             </Button>

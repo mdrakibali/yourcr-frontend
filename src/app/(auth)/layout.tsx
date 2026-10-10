@@ -9,9 +9,9 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="bg-card relative flex h-dvh flex-col overflow-y-auto">
+    <div className="bg-card relative flex h-dvh flex-col overflow-x-hidden overflow-y-auto">
       {/* Auth Navbar */}
-      <header className="bg-card sticky top-0 z-50 mx-0.5 w-full pt-4">
+      <header className="bg-card sticky top-0 z-50 w-full pt-4">
         <div className="container mx-auto flex h-14 items-center justify-between gap-3">
           <Link href="/" className="group flex min-w-0 shrink-0 items-center">
             <Image
