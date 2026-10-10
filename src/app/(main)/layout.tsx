@@ -4,9 +4,9 @@ import { ReactNode } from 'react';
 
 export default function MainLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="relative min-h-screen flex flex-col">
+    <div className="flex h-screen flex-col overflow-hidden relative">
       <Navbar/>
-      <main className="flex-1">
+      <main id="main-scroll-container" className="flex-1 overflow-y-auto">
         {children}
         <Footer />
       </main>

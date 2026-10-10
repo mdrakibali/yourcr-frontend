@@ -15,8 +15,10 @@ import {
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
+  { label: "Features", href: "/#feature" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Testimonials", href: "/#testimonial" },
   { label: "FAQ", href: "/#faq" },
-  { label: "Feature", href: "/#feature" },
   { label: "Contact", href: "/#contact" },
 ];
 

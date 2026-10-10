@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -5,6 +6,22 @@ import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("#")) {
+      const id = href.substring(1);
+      const target = document.getElementById(id);
+      const container = document.getElementById("main-scroll-container");
+      
+      if (target && container) {
+        e.preventDefault();
+        container.scrollTo({
+          top: target.offsetTop - 80,
+          behavior: "smooth",
+        });
+      }
+    }
+  };
 
   return (
     <footer className="w-full bg-card pt-16 md:pt-20 pb-6 mt-auto">
@@ -40,16 +57,19 @@ export function Footer() {
                 <Link href="/" className="hover:text-primary transition-colors">Home</Link>
               </li>
               <li>
-                <Link href="#feature" className="hover:text-primary transition-colors">Features</Link>
+                <Link href="#feature" onClick={(e) => handleScrollToSection(e, "#feature")} className="hover:text-primary transition-colors">Features</Link>
               </li>
               <li>
-                <Link href="#how-it-works" className="hover:text-primary transition-colors">How it Works</Link>
+                <Link href="#how-it-works" onClick={(e) => handleScrollToSection(e, "#how-it-works")} className="hover:text-primary transition-colors">How It Works</Link>
               </li>
               <li>
-                <Link href="#testimonial" className="hover:text-primary transition-colors">Testimonial</Link>
+                <Link href="#testimonial" onClick={(e) => handleScrollToSection(e, "#testimonial")} className="hover:text-primary transition-colors">Testimonials</Link>
               </li>
               <li>
-                <Link href="#faq" className="hover:text-primary transition-colors">FAQ</Link>
+                <Link href="#faq" onClick={(e) => handleScrollToSection(e, "#faq")} className="hover:text-primary transition-colors">FAQ</Link>
+              </li>
+              <li>
+                <Link href="#contact" onClick={(e) => handleScrollToSection(e, "#contact")} className="hover:text-primary transition-colors">Contact</Link>
               </li>
             </ul>
           </div>

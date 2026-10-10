@@ -13,7 +13,7 @@ export function DesktopNav({ navLinks, isScrolled }: DesktopNavProps) {
           key={link.label}
           href={link.href}
           label={link.label}
-          className={cn("transition-all duration-300", isScrolled ? "text-sm" : "text-base")}
+          className={cn("transition-all duration-300 text-sm", isScrolled ? "text-xs" : "text-sm")}
         />
       ))}
     </nav>
