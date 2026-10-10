@@ -24,6 +24,7 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
             ref={ref}
             id={id}
             className={cn(
+              "bg-card",
               Icon && "pl-9",
               className,
               errorMsg && "border-red-500 focus-visible:border-red-500 focus-visible:ring-red-500/20"

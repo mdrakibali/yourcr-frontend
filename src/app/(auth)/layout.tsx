@@ -9,9 +9,9 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="h-screen overflow-y-auto bg-gray-50 flex flex-col relative">
+    <div className="h-dvh overflow-y-auto bg-card flex flex-col relative">
       {/* Auth Navbar */}
-      <header className="w-full bg-white border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-10">
+      <header className="w-full shrink-0border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-10">
 
         <Link href="/">
           <Image
@@ -27,9 +27,8 @@ export default function AuthLayout({
           Back to Home
         </Link>
       </header>
-
       {/* Auth Content */}
-      <main className="flex-1 w-full bg-white flex flex-col items-center">
+      <main className="flex-1 w-full flex flex-col items-center">
         {children}
       </main>
     </div>
