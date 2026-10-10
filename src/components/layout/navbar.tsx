@@ -77,26 +77,30 @@ export function Navbar() {
         <div className="flex items-center gap-3 shrink-0 justify-self-end col-start-3">
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button 
-              variant="ghost" 
-              size={isScrolled ? "sm" : "default"}
-              className={cn(
-                "font-semibold text-foreground rounded-md border border-border cursor-pointer transition-all duration-300",
-                isScrolled ? "px-4" : "px-6"
-              )}
-            >
-              Login
-            </Button>
-            <Button 
-              variant="default" 
-              size={isScrolled ? "sm" : "default"}
-              className={cn(
-                "rounded-md font-semibold shadow-sm cursor-pointer transition-all duration-300",
-                isScrolled ? "px-4" : "px-6"
-              )}
-            >
-              Register
-            </Button>
+            <Link href="/login">
+              <Button 
+                variant="ghost" 
+                size={isScrolled ? "sm" : "default"}
+                className={cn(
+                  "font-semibold text-foreground rounded-md border border-border cursor-pointer transition-all duration-300",
+                  isScrolled ? "px-4" : "px-6"
+                )}
+              >
+                Login
+              </Button>
+            </Link>
+            <Link href="/register">
+              <Button 
+                variant="default" 
+                size={isScrolled ? "sm" : "default"}
+                className={cn(
+                  "rounded-md font-semibold shadow-sm cursor-pointer transition-all duration-300",
+                  isScrolled ? "px-4" : "px-6"
+                )}
+              >
+                Register
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle with Shadcn Sheet */}

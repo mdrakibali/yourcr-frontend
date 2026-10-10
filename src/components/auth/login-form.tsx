@@ -137,7 +137,7 @@ const LoginForm = () => {
             </Label>
           </div>
           <Link
-            href="/auth/forgot-password"
+            href="/forgot-password"
             className="text-xs font-bold text-primary hover:text-primary/80 transition-colors"
           >
             Forgot Password?
@@ -176,7 +176,7 @@ const LoginForm = () => {
 
       <p className="mt-8 text-center text-sm text-gray-600">
         Don't have an account?{" "}
-        <Link href="/auth/register" className="font-bold text-primary hover:underline">
+        <Link href="/register" className="font-bold text-primary hover:underline">
           Register here
         </Link>
       </p>

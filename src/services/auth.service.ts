@@ -62,26 +62,26 @@ export async function registerUser(
     return { success: false, message: "Invalid fields", errors: parsed.error.flatten().fieldErrors, inputs: values, timestamp: Date.now() };
   }
   
-  return { success: true, message: "Registration successful. Please verify OTP.", data: { redirect: "/auth/verify-otp" }, timestamp: Date.now() };
+  return { success: true, message: "Registration successful. Please verify OTP.", data: { redirect: "/verify-otp" }, timestamp: Date.now() };
 }
 
 export async function forgotPassword(prevState: AuthActionState, formData: FormData): Promise<AuthActionState> {
   const values = Object.fromEntries(formData.entries());
   const parsed = forgotPasswordSchema.safeParse(values);
   if (!parsed.success) return { success: false, message: "Invalid fields", errors: parsed.error.flatten().fieldErrors, inputs: values, timestamp: Date.now() };
-  return { success: true, message: "Reset link sent to email.", data: { redirect: "/auth/reset-password" }, timestamp: Date.now() };
+  return { success: true, message: "Reset link sent to email.", data: { redirect: "/reset-password" }, timestamp: Date.now() };
 }
 
 export async function resetPassword(prevState: AuthActionState, formData: FormData): Promise<AuthActionState> {
   const values = Object.fromEntries(formData.entries());
   const parsed = resetPasswordSchema.safeParse(values);
   if (!parsed.success) return { success: false, message: "Invalid fields", errors: parsed.error.flatten().fieldErrors, inputs: values, timestamp: Date.now() };
-  return { success: true, message: "Password reset successfully.", data: { redirect: "/auth/login" }, timestamp: Date.now() };
+  return { success: true, message: "Password reset successfully.", data: { redirect: "/login" }, timestamp: Date.now() };
 }
 
 export async function verifyOtp(prevState: AuthActionState, formData: FormData): Promise<AuthActionState> {
   const values = Object.fromEntries(formData.entries());
   const parsed = verifyOtpSchema.safeParse(values);
   if (!parsed.success) return { success: false, message: "Invalid fields", errors: parsed.error.flatten().fieldErrors, inputs: values, timestamp: Date.now() };
-  return { success: true, message: "OTP verified.", data: { redirect: "/auth/login" }, timestamp: Date.now() };
+  return { success: true, message: "OTP verified.", data: { redirect: "/login" }, timestamp: Date.now() };
 }

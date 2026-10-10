@@ -60,20 +60,22 @@ export function MobileNav({ navLinks }: MobileNavProps) {
           ))}
         </nav>
         <div className="flex flex-col gap-3 mt-6 pt-6">
-          <Button 
-            variant="ghost" 
-            className="w-full justify-center text-base py-6 text-foreground border border-border rounded-md"
-            onClick={() => setIsOpen(false)}
-          >
-            Login
-          </Button>
-          <Button 
-            variant="default"
-            className="w-full justify-center text-base py-6 rounded-md"
-            onClick={() => setIsOpen(false)}
-          >
-            Register
-          </Button>
+          <Link href="/login" onClick={() => setIsOpen(false)}>
+            <Button 
+              variant="ghost" 
+              className="w-full justify-center text-base py-6 text-foreground border border-border rounded-md"
+            >
+              Login
+            </Button>
+          </Link>
+          <Link href="/register" onClick={() => setIsOpen(false)}>
+            <Button 
+              variant="default"
+              className="w-full justify-center text-base py-6 rounded-md"
+            >
+              Register
+            </Button>
+          </Link>
         </div>
       </SheetContent>
     </Sheet>
