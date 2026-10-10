@@ -65,7 +65,7 @@ export function FeaturesSection() {
             return (
               <div 
                 key={index} 
-                className="group relative flex items-start gap-3 p-4 md:p-5 bg-card border border-border/70 rounded-xl hover:border-primary/40 transition-all duration-300 hover:shadow-sm"
+                className="group relative flex items-start gap-3 p-4 md:p-5 bg-gradient-to-br from-primary/5 to-brand-orange/5 border border-border/70 rounded-xl hover:border-primary/40 transition-all duration-300 hover:shadow-sm hover:from-primary/10 hover:to-brand-orange/10"
               >
                 <div className="w-10 h-10 shrink-0 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
                   <Icon className="w-4 h-4 text-primary stroke-[2]" />
