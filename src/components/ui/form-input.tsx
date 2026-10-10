@@ -25,8 +25,8 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
             id={id}
             className={cn(
               Icon && "pl-9",
-              errorMsg ? "border-red-500 focus-visible:border-red-500 focus-visible:ring-red-500/20" : "",
-              className
+              className,
+              errorMsg && "border-red-500 focus-visible:border-red-500 focus-visible:ring-red-500/20"
             )}
             {...props}
           />
