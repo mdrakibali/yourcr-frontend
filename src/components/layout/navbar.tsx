@@ -46,9 +46,9 @@ export function Navbar() {
     >
       <div
         className={cn(
-          "mx-auto flex items-center justify-between transition-all duration-500 ease-in-out",
+          "mx-auto w-full flex items-center justify-between transition-all duration-500 ease-in-out",
           isScrolled
-            ? "max-w-4xl bg-background/70 backdrop-blur-lg rounded-full py-2 px-6"
+            ? "max-w-4xl bg-background/70 backdrop-blur-lg shadow-sm border border-border rounded-full py-2 px-6"
             : "container bg-transparent py-4"
         )}
       >

@@ -22,13 +22,13 @@ export function HeroSection() {
           The ultimate platform for CRs and students. Share important announcements, track routines, and organize resources in one place—no more scrolling through endless group chats.
         </p>
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row items-center gap-4">
-          <Button className="px-6 font-semibold">
+        <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+          <Button className="px-6 font-semibold w-full sm:w-auto">
             Get Started
           </Button>
           <Button 
             variant="ghost" 
-            className="px-4 font-semibold hover:bg-transparent hover:text-primary group border border-border text-primary"
+            className="px-4 font-semibold hover:bg-transparent hover:text-primary group border border-border text-primary w-full sm:w-auto"
           >
             <Play className="w-3 h-3 ml-0.5 fill-current" />
             How It Works
