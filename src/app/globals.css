@@ -85,7 +85,7 @@
     --placeholder: #94a3b8;
 
     /* Borders & Rings */
-    --border: #e2e8f0;
+    --border: var(--primary);
     --input: #e2e8f0;
     --ring: #007B88; /* Input focus korলে Teal color */
 
@@ -133,7 +133,7 @@
     --placeholder: #738a86;
 
     /* Borders & Rings */
-    --border: #2e4a45;
+    --border: var(--primary);
     --input: #2e4a45;
     --ring: #3bdcb3; /* Input focus korলে Mint color */
 
@@ -192,11 +192,11 @@
    ========================================================== */
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1220px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 @media (min-width: 768px) {
