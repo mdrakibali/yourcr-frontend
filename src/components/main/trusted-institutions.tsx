@@ -6,7 +6,7 @@ import { TRUSTED_INSTITUTIONS } from "@/lib/constants";
 
 export function TrustedInstitutions() {
   return (
-    <section className="w-full bg-muted/40 py-4 md:py-6 lg:py-8">
+    <section className="w-full bg-card py-4 md:py-6 lg:py-8">
       <div className="w-full relative z-10 overflow-hidden">
         <p className="text-center text-xs md:text-sm font-semibold tracking-widest text-muted-foreground mb-8 px-4">
           Trusted by students from leading institutions

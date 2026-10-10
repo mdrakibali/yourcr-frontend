@@ -6,7 +6,7 @@ import { RoleCardProps } from "@/types/how-it-works";
 // Component to display the role-specific benefits card
 export function RoleCard({ card }: RoleCardProps): React.JSX.Element {
   return (
-    <div className="bg-card border border-border/70 rounded-3xl grid grid-cols-1 md:grid-cols-2 min-h-87.5 overflow-hidden items-center">
+    <div className="bg-background rounded-3xl grid grid-cols-1 md:grid-cols-2 min-h-87.5 overflow-hidden items-center">
       {/* Content */}
       <div className="flex flex-col p-8 justify-center z-10">
         <span className="text-[10px] font-bold tracking-widest text-primary uppercase mb-2">

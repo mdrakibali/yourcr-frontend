@@ -1,5 +1,16 @@
 import { StepItem, RoleCardItem } from "@/types/how-it-works";
 import { NavLink } from "@/types/navbar";
+import { Testimonial } from "@/types/testimonial";
+import { MapLocation } from "@/types/map";
+import { Feature } from "@/types/feature";
+import { 
+  CalendarDays, 
+  ClipboardList, 
+  BookOpenCheck, 
+  BellRing, 
+  Library, 
+  Users 
+} from "lucide-react";
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
@@ -62,8 +73,6 @@ export const HOW_IT_WORKS_ROLE_CARDS: RoleCardItem[] = [
   },
 ];
 
-import { MapLocation } from "@/types/map";
-
 export const INSTITUTION_LOCATIONS: MapLocation[] = [
   // Original ones outside Dhaka
   { id: "3", name: "Rajshahi University", district: "Rajshahi", coordinates: [88.6366, 24.3698] },
@@ -120,7 +129,7 @@ export const TRUSTED_INSTITUTIONS = [
   { name: "North South University", logo: "/assets/institutions/NSU.png" },
 ];
 
-export const TESTIMONIALS = [
+export const TESTIMONIALS: Testimonial[] = [
   {
     company: "University of Dhaka",
     companyLogo: "/assets/institutions/DU.png",
@@ -169,4 +178,36 @@ export const TESTIMONIALS = [
   }
 ];
 
+export const FEATURES: Feature[] = [
+  {
+    title: "Class Routine",
+    description: "Know what class comes next and where it takes place.",
+    icon: CalendarDays,
+  },
+  {
+    title: "Exam Schedule",
+    description: "Keep upcoming exams and their details together.",
+    icon: ClipboardList,
+  },
+  {
+    title: "Assignments",
+    description: "Stay aware of coursework and approaching deadlines.",
+    icon: BookOpenCheck,
+  },
+  {
+    title: "Notices",
+    description: "Find announcements without searching through chat groups.",
+    icon: BellRing,
+  },
+  {
+    title: "Subjects & Resources",
+    description: "Keep semester learning materials organized.",
+    icon: Library,
+  },
+  {
+    title: "Group Management",
+    description: "Help CRs coordinate semester information with members.",
+    icon: Users,
+  },
+];
 
