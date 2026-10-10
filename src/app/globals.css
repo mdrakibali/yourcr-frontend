@@ -41,12 +41,24 @@
   --color-pastel-pink: var(--pastel-pink);
   --color-pastel-green: var(--pastel-green);
 
-  /* --- 7. Design System Utilities --- */
+  /* --- 7. Status Badges & Gradients --- */
+  --color-grade-start: #f59e0b;
+  --color-grade-end: #ea580c;
+  --color-status-late-bg: #fef3c7;
+  --color-status-late-text: #d97706;
+  --color-status-submitted-bg: #dcfce7;
+  --color-status-submitted-text: #16a34a;
+  --color-status-pending-bg: #ffedd5;
+  --color-status-pending-text: #c2410c;
+  --color-status-upcoming-bg: #e0f2fe;
+  --color-status-upcoming-text: #0284c7;
+
+  /* --- 8. Design System Utilities --- */
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
   --shadow-popover: 0 0 20px 5px rgba(0, 0, 0, 0.12);
-  /* --- 8. Typography --- */
+  /* --- 9. Typography --- */
   --font-sans: var(--font-sans), 'Noto Sans Bengali', sans-serif;
 }
 
