@@ -7,7 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 
 export function ContactSection() {
   return (
-    <section className="py-12 md:py-16 bg-background">
+    <section id="contact" className="py-12 md:py-16 bg-background">
       <div className="container px-4 mx-auto max-w-5xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           
