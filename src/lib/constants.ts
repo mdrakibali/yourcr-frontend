@@ -119,3 +119,54 @@ export const TRUSTED_INSTITUTIONS = [
   { name: "IUB", logo: "/assets/institutions/IUB.png" },
   { name: "North South University", logo: "/assets/institutions/NSU.png" },
 ];
+
+export const TESTIMONIALS = [
+  {
+    company: "University of Dhaka",
+    companyLogo: "DU",
+    text: "Being a Class Representative used to mean dealing with hundreds of messages daily. Now, I just update the schedule on YourCR, and everyone gets notified instantly. It has saved me hours of stress and kept the whole batch organized.",
+    author: "Tanvir Ahmed",
+    role: "Class Representative, Batch 29",
+    avatar: "https://i.pravatar.cc/150?u=tanvir",
+  },
+  {
+    text: "The notice board feature is a lifesaver. No more scrolling through endless WhatsApp groups to find that one syllabus PDF sent three weeks ago.",
+    author: "Sadia Rahman",
+    role: "Computer Science Student",
+    avatar: "https://i.pravatar.cc/150?u=sadia",
+  },
+  {
+    text: "Before this platform, class cancellations or sudden room changes caused massive confusion. Now, real-time push notifications ensure nobody misses a single update.",
+    author: "Fahim Faysal",
+    role: "Department Coordinator",
+    avatar: "https://i.pravatar.cc/150?u=fahim",
+  },
+  {
+    text: "Everything we need for the semester—routines, assignments, and exam dates—is finally in one place. The user interface is incredibly intuitive and fast.",
+    author: "Nusrat Jahan",
+    role: "BBA Student",
+    avatar: "https://i.pravatar.cc/150?u=nusrat",
+  },
+  {
+    text: "As a faculty member, sharing resources with specific class groups has never been easier. I can directly upload lecture notes that go straight to the students' dashboard.",
+    author: "Dr. Shafiqul Islam",
+    role: "Assistant Professor",
+    avatar: "https://i.pravatar.cc/150?u=shafiq",
+  },
+  {
+    text: "I love how easy it is to track my assignments. The upcoming deadline reminders keep me from procrastinating. Absolutely brilliant platform for university students!",
+    author: "Rafiqul Hasan",
+    role: "Engineering Student",
+    avatar: "https://i.pravatar.cc/150?u=rafiq",
+  },
+  {
+    company: "BUET",
+    companyLogo: "BUET",
+    text: "We integrated our entire batch's workflow here. The ability to create custom subgroups for lab sections and project teams means the right information always reaches the right people without spamming the general group.",
+    author: "Ayman Sadiq",
+    role: "Batch Representative, CSE",
+    avatar: "https://i.pravatar.cc/150?u=ayman",
+  }
+];
+
+
