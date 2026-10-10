@@ -17,12 +17,10 @@ const LoginForm = () => {
   const [isPendingModalOpen, setIsPendingModalOpen] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
-
   const [state, formAction, isPending] = useActionState(
     loginUser,
     LOGIN_INITIAL_STATE,
   );
-
   const [lastActionTimestamp, setLastActionTimestamp] = useState<number>(0);
 
   useEffect(() => {
@@ -30,15 +28,12 @@ const LoginForm = () => {
       setLastActionTimestamp(state.timestamp);
       if (state.success) {
         const loginData = state.data;
-
         if (loginData?.isCrApproved === false) {
           setIsPendingModalOpen(true);
           return;
         }
-        
         // toast.success(state.message);
         console.log("Success:", state.message);
-
         const callbackUrl = searchParams?.get("redirect");
 
         if (loginData?.redirect) {
