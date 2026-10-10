@@ -3,5 +3,5 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "files.autoSave": "off",
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
 }
