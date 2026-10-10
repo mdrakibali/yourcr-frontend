@@ -56,10 +56,10 @@ export function Navbar() {
     >
       <div
         className={cn(
-          "mx-auto w-full transition-all duration-500 ease-in-out",
+          "mx-auto w-full transition-all duration-500 ease-in-out h-14",
           isScrolled
-            ? "max-w-4xl bg-background/70 backdrop-blur-lg rounded-full h-14 px-6 flex items-center justify-between"
-            : "container bg-transparent h-14 sm:h-16 flex justify-between items-center gap-3"
+            ? "max-w-4xl bg-background/70 backdrop-blur-lg rounded-full px-6 flex items-center justify-between"
+            : "container bg-transparent flex justify-between items-center gap-3"
         )}
       >
         {/* Logo */}
