@@ -8,8 +8,8 @@ export const metadata = {
 
 const PrivacyPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center py-12 px-6 lg:px-20 xl:px-24">
-      <div className="w-full max-w-3xl bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+    <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <div className="w-full">
         <Link href="/register" className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-gray-900 mb-6 transition-colors">
           <ArrowLeft className="w-4 h-4" />
           Back to Register
