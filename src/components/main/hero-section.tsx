@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 export function HeroSection() {
   return (
-    <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden">
+    <section className="relative pt-24 pb-8 lg:pt-32 lg:pb-16 overflow-hidden">
       {/* Background Grid Pattern */}
       <div 
         className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#8080801a_1px,transparent_1px),linear-gradient(to_bottom,#8080801a_1px,transparent_1px)]"
