@@ -38,7 +38,7 @@ export function MapSection() {
   }, [geo, path]);
 
   return (
-    <section className="py-24 bg-white overflow-hidden relative">
+    <section className="py-12 md:py-16 xl:py-20 bg-white overflow-hidden relative">
       <div className="container px-4 mx-auto relative z-10">
         <div className="flex flex-col items-start text-left max-w-2xl mb-16">
           <span className="text-[10px] md:text-xs font-bold tracking-widest text-primary uppercase mb-2">

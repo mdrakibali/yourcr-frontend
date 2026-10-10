@@ -4,10 +4,10 @@ import { TESTIMONIALS } from "@/lib/constants";
 
 export function TestimonialSection() {
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-12 md:py-16 xl:py-20 bg-background relative overflow-hidden">
       {/* Decorative background blurs using project's pastel colors */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-pastel-blue rounded-full mix-blend-multiply filter blur-[120px] opacity-70 pointer-events-none transform -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-pastel-pink rounded-full mix-blend-multiply filter blur-[120px] opacity-70 pointer-events-none transform translate-x-1/4 translate-y-1/4" />
+      <div className="absolute top-0 left-0 w-125 h-125 bg-pastel-blue rounded-full mix-blend-multiply filter blur-[120px] opacity-70 pointer-events-none transform -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-125 h-125 bg-pastel-pink rounded-full mix-blend-multiply filter blur-[120px] opacity-70 pointer-events-none transform translate-x-1/4 translate-y-1/4" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-start text-left max-w-2xl mb-16">
@@ -38,7 +38,7 @@ export function TestimonialSection() {
                 </div>
               )}
               
-              <p className="text-muted-foreground leading-relaxed flex-grow text-[13px] md:text-[14px]">
+              <p className="text-muted-foreground leading-relaxed grow text-[13px] md:text-[14px]">
                 {testimonial.text}
               </p>
               

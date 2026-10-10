@@ -43,7 +43,7 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section id="feature" className="w-full py-16 bg-background relative overflow-hidden">
+    <section id="feature" className="w-full py-12 md:py-16 xl:py-20 bg-background relative overflow-hidden">
       <div className="container relative z-10 px-4 md:px-6 mx-auto">
         {/* Header - Left Aligned to match reference */}
         <div className="flex flex-col items-start text-left max-w-3xl mb-10">
