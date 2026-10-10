@@ -29,10 +29,8 @@ export function MapSection() {
         <path
           key={i}
           d={path(f)!}
-          fill="#f3f4f6"
-          stroke="#E5E7EB"
-          strokeWidth={0.5}
-          className="outline-none pointer-events-none"
+          className="fill-card stroke-input outline-none pointer-events-none"
+          strokeWidth={1}
         />
       ));
   }, [geo, path]);
@@ -52,7 +50,7 @@ export function MapSection() {
           </p>
         </div>
 
-        <div className="w-full max-w-4xl mx-auto relative flex justify-center bg-card rounded-2xl overflow-hidden p-6 md:p-8">
+        <div className="w-full max-w-4xl mx-auto relative flex justify-center overflow-hidden">
           {!geo && <div className="h-100 flex items-center justify-center">Loading map...</div>}
           
           {geo && projection !== null && path !== null && (
