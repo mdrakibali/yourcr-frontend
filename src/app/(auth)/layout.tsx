@@ -11,8 +11,8 @@ export default function AuthLayout({
   return (
     <div className="h-dvh overflow-y-auto bg-card flex flex-col relative">
       {/* Auth Navbar */}
-      <header className="sticky top-0 z-50 w-full pt-4 bg-card">
-        <div className="container mx-auto flex items-center justify-between gap-3">
+      <header className="sticky top-0 z-50 w-full pt-4 bg-card mx-0.5">
+        <div className="container mx-auto h-14 flex items-center justify-between gap-3">
           <Link href="/" className="flex items-center group min-w-0 shrink-0">
             <Image
               src="/assets/yourcr-logo.png"
