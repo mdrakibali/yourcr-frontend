@@ -154,14 +154,11 @@
     scroll-behavior: smooth;
     background-color: var(--background);
     color-scheme: light;
-    height: 100dvh;
-    overflow: hidden;
     scrollbar-gutter: stable;
     font-family: var(--font-family);
   }
   body {
-    height: 100dvh;
-    overflow: hidden;
+    min-height: 100vh;
     margin: 0;
     background-color: var(--background);
     color: var(--foreground);

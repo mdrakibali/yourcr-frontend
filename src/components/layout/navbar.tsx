@@ -17,13 +17,10 @@ export function Navbar() {
 
   // Handle scroll event to trigger glassmorphism effect
   useEffect(() => {
-    const scrollContainer = document.getElementById("main-scroll-container");
-    if (!scrollContainer) return;
-
     const handleScroll = () => {
       // Only trigger glassmorphism on desktop/tablet (>= 768px)
       if (window.innerWidth >= 768) {
-        setIsScrolled(scrollContainer.scrollTop > 20);
+        setIsScrolled(window.scrollY > 20);
       } else {
         setIsScrolled(false);
       }
@@ -32,11 +29,11 @@ export function Navbar() {
     // Check scroll position on mount
     handleScroll();
     
-    scrollContainer.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleScroll); // Reset if resized to mobile
     
     return () => {
-      scrollContainer.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
     };
   }, []);
