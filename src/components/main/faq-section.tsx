@@ -10,7 +10,7 @@ import { FAQS } from "@/lib/constants";
 
 export function FaqSection() {
   return (
-    <section className="py-16 md:py-24 bg-card">
+    <section id="faq" className="py-16 md:py-24 bg-card">
       <div className="container px-4 mx-auto max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left Column */}
