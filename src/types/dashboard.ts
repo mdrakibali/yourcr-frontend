@@ -114,3 +114,40 @@ export interface DashboardOverviewData {
   latestNotices: NoticeItem[];
   stats: GroupStats;
 }
+
+// Component Props Interfaces
+export interface OverviewBannerProps {
+  userName: string;
+  subtitle: string;
+  isOwnerOrAdmin?: boolean;
+}
+
+export interface DateBadgeProps {
+  dayNumber: string;
+  dayName: string;
+  monthName: string;
+}
+
+export interface TodayClassesGridProps {
+  classes: ClassPeriod[];
+}
+
+export interface TodayClassCardProps {
+  period: ClassPeriod;
+}
+
+export interface RoutineTimelineProps {
+  classes: ClassPeriod[];
+}
+
+export interface NextClassCardProps {
+  nextClass?: ClassPeriod;
+  stats: GroupStats;
+  isOwnerOrAdmin?: boolean;
+}
+
+export interface UpcomingDeadlinesTableProps {
+  assignments: AssignmentItem[];
+  exams: ExamItem[];
+}
+
