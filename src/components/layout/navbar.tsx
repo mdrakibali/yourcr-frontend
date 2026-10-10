@@ -46,14 +46,14 @@ export function Navbar() {
     >
       <div
         className={cn(
-          "mx-auto w-full flex items-center justify-between transition-all duration-500 ease-in-out",
+          "mx-auto w-full transition-all duration-500 ease-in-out",
           isScrolled
-            ? "max-w-4xl bg-background/70 backdrop-blur-lg rounded-full py-2 px-6"
-            : "container bg-transparent py-4"
+            ? "max-w-4xl bg-background/70 backdrop-blur-lg rounded-full h-14 px-6 flex items-center justify-between"
+            : "container bg-transparent h-14 sm:h-16 flex justify-between items-center gap-3"
         )}
       >
         {/* Logo */}
-        <Link href="/" className="flex items-center group">
+        <Link href="/" className="flex items-center group min-w-0 shrink-0 justify-self-start">
           <Image
             src="/assets/yourcr-logo.png"
             alt="YourCR Logo"
@@ -69,32 +69,35 @@ export function Navbar() {
         {/* Desktop Navigation */}
         <DesktopNav navLinks={navLinks} isScrolled={isScrolled} />
 
-        {/* Auth Buttons */}
-        <div className="hidden md:flex items-center gap-3">
-          <Button 
-            variant="ghost" 
-            size={isScrolled ? "sm" : "default"}
-            className={cn(
-              "font-semibold text-foreground rounded-md border border-border cursor-pointer transition-all duration-300",
-              isScrolled ? "px-4" : "px-6"
-            )}
-          >
-            Login
-          </Button>
-          <Button 
-            variant="default" 
-            size={isScrolled ? "sm" : "default"}
-            className={cn(
-              "rounded-md font-semibold shadow-sm cursor-pointer transition-all duration-300",
-              isScrolled ? "px-4" : "px-6"
-            )}
-          >
-            Register
-          </Button>
-        </div>
+        {/* Right Side Controls */}
+        <div className="flex items-center gap-3 shrink-0 justify-self-end col-start-3">
+          {/* Auth Buttons */}
+          <div className="hidden md:flex items-center gap-3">
+            <Button 
+              variant="ghost" 
+              size={isScrolled ? "sm" : "default"}
+              className={cn(
+                "font-semibold text-foreground rounded-md border border-border cursor-pointer transition-all duration-300",
+                isScrolled ? "px-4" : "px-6"
+              )}
+            >
+              Login
+            </Button>
+            <Button 
+              variant="default" 
+              size={isScrolled ? "sm" : "default"}
+              className={cn(
+                "rounded-md font-semibold shadow-sm cursor-pointer transition-all duration-300",
+                isScrolled ? "px-4" : "px-6"
+              )}
+            >
+              Register
+            </Button>
+          </div>
 
-        {/* Mobile Menu Toggle with Shadcn Sheet */}
-        <MobileNav navLinks={navLinks} />
+          {/* Mobile Menu Toggle with Shadcn Sheet */}
+          <MobileNav navLinks={navLinks} />
+        </div>
       </div>
     </header>
   );
