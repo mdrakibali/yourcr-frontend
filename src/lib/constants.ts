@@ -1,3 +1,4 @@
+import { Faq } from "@/types/faq";
 import { StepItem, RoleCardItem } from "@/types/how-it-works";
 import { NavLink } from "@/types/navbar";
 import { Testimonial } from "@/types/testimonial";
@@ -219,3 +220,27 @@ export const AVATARS = [
   "https://i.pravatar.cc/150?u=5",
 ];
 
+
+
+export const FAQS: Faq[] = [
+  {
+    question: "What Kind Of Courses And Subjects Does Your Platform Offer?",
+    answer: "Our Platform Offers A Wide Range Of Courses Covering Various Subjects, Including STEM, Humanities, Languages, And Arts. We Continually Update And Expand Our Course Offerings To Meet The Evolving Needs Of Learners Of All Ages."
+  },
+  {
+    question: "Can The Platform Be Integrated With Existing School Systems?",
+    answer: "Yes, our platform is designed to easily integrate with existing school management systems and popular communication tools like WhatsApp and Telegram to ensure seamless updates."
+  },
+  {
+    question: "How Does The Platform Ensure The Safety And Privacy Of Its Users?",
+    answer: "We employ industry-standard encryption and strict access controls. Only verified CRs and students can access class-specific data, and no personal information is shared with third parties."
+  },
+  {
+    question: "Is The Platform Suitable For All Grades And Levels Of Education?",
+    answer: "Absolutely. Whether you are in high school, college, or university, Your CR provides flexible tools tailored for managing academic schedules and resources effectively."
+  },
+  {
+    question: "What Kind Of Support And Training Do You Provide For New Users?",
+    answer: "We offer comprehensive onboarding guides, video tutorials, and 24/7 customer support to help you set up and get the most out of your class management dashboard."
+  }
+];

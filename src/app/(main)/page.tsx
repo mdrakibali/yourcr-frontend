@@ -4,6 +4,7 @@ import { HowItWorksSection } from "@/components/main/how-it-works-section";
 import { FeaturesSection } from "@/components/main/features-section";
 import { MapSection } from "@/components/main/map-section";
 import { TestimonialSection } from "@/components/main/testimonial-section";
+import { FaqSection } from "@/components/main/faq-section";
 import { CtaSection } from "@/components/main/cta-section";
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <MapSection />
       <TestimonialSection />
       <CtaSection />
+      <FaqSection />
     </section>
   );
 }
