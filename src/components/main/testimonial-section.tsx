@@ -26,15 +26,25 @@ export function TestimonialSection() {
           {TESTIMONIALS.map((testimonial, idx) => (
             <div 
               key={idx} 
-              className="break-inside-avoid mb-4 md:mb-6 bg-card border border-border/40 rounded-xl p-5 md:p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col"
+              className="break-inside-avoid mb-4 md:mb-6 bg-card border border-border/40 rounded-xl p-4 md:p-5 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col cursor-pointer"
             >
               {testimonial.company && (
-                <div className="flex items-center gap-2 mb-4 text-foreground font-semibold text-[15px]">
-                  {/* Pseudo logo using project primary color */}
-                  <div className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center text-primary overflow-hidden">
-                    <div className="w-2 h-2 rounded-full bg-primary" />
-                  </div>
-                  {testimonial.companyLogo}
+                <div className="flex items-center gap-2.5 mb-4 text-foreground font-semibold text-[15px]">
+                  {testimonial.companyLogo?.startsWith("/") ? (
+                    <div className="relative w-5 h-5 shrink-0">
+                      <Image
+                        src={testimonial.companyLogo}
+                        alt={testimonial.company}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-4 h-4 shrink-0 rounded-full bg-primary/20 flex items-center justify-center text-primary overflow-hidden">
+                      <div className="w-2 h-2 rounded-full bg-primary" />
+                    </div>
+                  )}
+                  <span className="truncate">{testimonial.company}</span>
                 </div>
               )}
               

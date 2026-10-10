@@ -123,7 +123,7 @@ export const TRUSTED_INSTITUTIONS = [
 export const TESTIMONIALS = [
   {
     company: "University of Dhaka",
-    companyLogo: "DU",
+    companyLogo: "/assets/institutions/DU.png",
     text: "Being a Class Representative used to mean dealing with hundreds of messages daily. Now, I just update the schedule on YourCR, and everyone gets notified instantly. It has saved me hours of stress and kept the whole batch organized.",
     author: "Tanvir Ahmed",
     role: "Class Representative, Batch 29",
@@ -161,7 +161,7 @@ export const TESTIMONIALS = [
   },
   {
     company: "BUET",
-    companyLogo: "BUET",
+    companyLogo: "/assets/institutions/BUET.png",
     text: "We integrated our entire batch's workflow here. The ability to create custom subgroups for lab sections and project teams means the right information always reaches the right people without spamming the general group.",
     author: "Ayman Sadiq",
     role: "Batch Representative, CSE",
