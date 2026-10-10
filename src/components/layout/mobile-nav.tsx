@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,6 +18,16 @@ import type { MobileNavProps } from "@/types/navbar";
 export function MobileNav({ navLinks }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger
@@ -26,7 +36,7 @@ export function MobileNav({ navLinks }: MobileNavProps) {
       >
         <Menu size={24} />
       </SheetTrigger>
-      <SheetContent side="right" className="w-75 sm:w-100 border-l-border p-6">
+      <SheetContent side="right" className="w-75 sm:w-100 border-none p-6">
         <SheetHeader className="text-left mb-6 mt-4">
           <SheetTitle>
             <Image
@@ -49,17 +59,17 @@ export function MobileNav({ navLinks }: MobileNavProps) {
             />
           ))}
         </nav>
-        <div className="flex flex-col gap-3 border-t border-border mt-6 pt-6">
+        <div className="flex flex-col gap-3 mt-6 pt-6">
           <Button 
             variant="ghost" 
-            className="w-full justify-center text-base py-6 text-foreground"
+            className="w-full justify-center text-base py-6 text-foreground border border-border rounded-md"
             onClick={() => setIsOpen(false)}
           >
             Login
           </Button>
           <Button 
             variant="default"
-            className="w-full justify-center text-base py-6 shadow-sm"
+            className="w-full justify-center text-base py-6 rounded-md"
             onClick={() => setIsOpen(false)}
           >
             Register

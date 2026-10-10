@@ -4,7 +4,19 @@ import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 export function HeroSection() {
   return (
-    <section className="relative pt-10 pb-10">
+    <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden">
+      {/* Background Grid Pattern */}
+      <div 
+        className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#8080801a_1px,transparent_1px),linear-gradient(to_bottom,#8080801a_1px,transparent_1px)]"
+        style={{
+          backgroundSize: "60px 60px",
+          maskImage: "linear-gradient(to bottom, white 20%, transparent 80%)",
+          WebkitMaskImage: "linear-gradient(to bottom, white 20%, transparent 80%)"
+        }}
+      />
+      {/* Primary Color Glow Blob */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-lg md:max-w-3xl h-75 md:h-100 bg-primary/20 blur-[100px] md:blur-[120px] rounded-full z-0 opacity-70 pointer-events-none" />
+
       <div className="container relative z-10 flex flex-col items-center text-center">
         {/* Badge */}
         <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 mb-8">

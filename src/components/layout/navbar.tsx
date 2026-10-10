@@ -19,7 +19,7 @@ const navLinks: NavLink[] = [
 
 // Main Navbar Layout Component
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   // Handle scroll event to trigger glassmorphism effect
   useEffect(() => {
@@ -27,14 +27,24 @@ export function Navbar() {
     if (!scrollContainer) return;
 
     const handleScroll = () => {
-      setIsScrolled(scrollContainer.scrollTop > 20);
+      // Only trigger glassmorphism on desktop/tablet (>= 768px)
+      if (window.innerWidth >= 768) {
+        setIsScrolled(scrollContainer.scrollTop > 20);
+      } else {
+        setIsScrolled(false);
+      }
     };
     
     // Check scroll position on mount
     handleScroll();
     
     scrollContainer.addEventListener("scroll", handleScroll);
-    return () => scrollContainer.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll); // Reset if resized to mobile
+    
+    return () => {
+      scrollContainer.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
 
   return (

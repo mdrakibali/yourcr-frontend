@@ -182,7 +182,7 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: var(--border);
+    background: #d1d5db; /* soft gray matching the image */
     border-radius: 9999px;
   }
 }
