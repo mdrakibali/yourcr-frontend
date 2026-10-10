@@ -11,18 +11,18 @@ export default function AuthLayout({
   return (
     <div className="h-dvh overflow-y-auto bg-card flex flex-col relative">
       {/* Auth Navbar */}
-      <header className="sticky top-0 z-50 w-full pt-4 bg-card">
-        <div className="container mx-auto h-14 flex items-center justify-between gap-3">
-          <Link href="/" className="flex items-center group min-w-0 shrink-0">
+          <header className="w-full shrink-0 pt-4 pb-2 z-50 bg-card relative">
+        <div className="mx-auto w-full transition-all duration-500 ease-in-out h-14 container flex justify-between items-center gap-3">
+          <Link href="/" className="flex items-center group min-w-0 shrink-0 justify-self-start">
             <Image
               src="/assets/yourcr-logo.png"
               alt="Your CR Logo"
               width={150}
               height={40}
-              className="object-contain w-36"
+              className="object-contain transition-all duration-300 w-36"
             />
           </Link>
-          <Link href="/" className="flex items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors font-medium text-sm">
+          <Link href="/" className="flex items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors font-medium text-sm shrink-0 justify-self-end col-start-3">
             <ArrowLeft className="w-4 h-4" />
             Back to Home
           </Link>
