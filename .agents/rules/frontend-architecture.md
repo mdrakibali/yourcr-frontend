@@ -103,3 +103,7 @@ Every component file MUST follow this strict top-to-bottom order:
   - `src/components/auth/`: Components specific to the (auth) routes.
   - Shared components go to `src/components/ui/`, `layout/`, or `shared/`.
   - Feature-specific or page-specific client components (e.g., a specific Dashboard chart) should be colocated inside the route group using a `_components` folder (e.g., `src/app/(dashboard)/_components/` or `src/components/dashboard/`). This prevents cluttering the global `components` folder with single-use components.
+
+## 13. Shadcn UI & Base UI
+
+- **No asChild Prop:** Shadcn UI in this project uses `@base-ui/react`. Do NOT use the `asChild` prop on components like `SheetTrigger`, `SheetTitle`, `DialogTrigger`, etc. Base UI natively renders the correct accessible element (e.g., `<button>` or `<h2>`). If you use `asChild`, TypeScript will throw a type error because the prop does not exist on Base UI primitives. Always apply classes and event handlers directly to the trigger or wrapper components.
