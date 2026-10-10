@@ -11,7 +11,7 @@ import {
 
 export function HowItWorksSection() {
   return (
-    <section className="w-full py-20 md:py-32 bg-muted/20 relative overflow-hidden">
+    <section className="w-full py-16 bg-muted/20 relative overflow-hidden">
       <div className="container relative z-10 px-4 md:px-6 mx-auto">
         
         {/* Top Section - Steps */}

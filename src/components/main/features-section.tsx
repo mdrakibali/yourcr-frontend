@@ -43,7 +43,7 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section id="feature" className="w-full py-16 md:py-24 bg-background relative overflow-hidden">
+    <section id="feature" className="w-full py-16 bg-background relative overflow-hidden">
       <div className="container relative z-10 px-4 md:px-6 mx-auto">
         {/* Header - Left Aligned to match reference */}
         <div className="flex flex-col items-start text-left max-w-3xl mb-10">
@@ -65,10 +65,10 @@ export function FeaturesSection() {
             return (
               <div 
                 key={index} 
-                className="group relative flex items-start gap-3 p-4 md:p-5 bg-gradient-to-br from-primary/5 to-brand-orange/5 border border-border/70 rounded-xl hover:border-primary/40 transition-all duration-300 hover:shadow-sm hover:from-primary/10 hover:to-brand-orange/10"
+                className="group relative flex items-start gap-3 p-4 md:p-5 bg-background rounded-xl hover:border-primary/40 transition-all duration-300 border border-border cursor-pointer"
               >
                 <div className="w-10 h-10 shrink-0 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
-                  <Icon className="w-4 h-4 text-primary stroke-[2]" />
+                  <Icon className="w-4 h-4 text-primary stroke-2" />
                 </div>
                 
                 <div className="flex flex-col pt-0.5">
