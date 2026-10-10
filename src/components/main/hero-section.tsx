@@ -25,13 +25,13 @@ export function HeroSection() {
           </span>
         </div>
         {/* Heading */}
-        <h1 className="max-w-3xl text-2xl md:text-3xl xl:text-5xl font-semibold tracking-tight text-foreground mb-4 leading-tight">
-         Simplify Class Management  <br className="hidden sm:block" />
-          <span className="text-brand-orange">with Your CR</span>
+        <h1 className="max-w-4xl text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-6 leading-[1.15] text-balance">
+          Stop scrolling through chats. <br className="hidden sm:block" />
+          Start managing with <span className="text-transparent bg-clip-text bg-linear-to-br from-primary to-brand-orange">Your CR.</span>
         </h1>
         {/* Sub-heading */}
-        <p className="max-w-2xl text-base text-muted-foreground mb-8 leading-relaxed">
-          The ultimate platform for CRs and students. Share important announcements, track routines, and organize resources in one place—no more scrolling through endless group chats.
+        <p className="max-w-3xl text-base text-muted-foreground mb-10 leading-relaxed text-balance">
+          The ultimate workspace for Class Representatives and students. Keep routines, announcements, and study materials perfectly organized in one place.
         </p>
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
