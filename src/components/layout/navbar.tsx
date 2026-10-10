@@ -9,13 +9,7 @@ import { DesktopNav } from "@/components/layout/desktop-nav";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import type { NavLink } from "@/types/navbar";
 
-// Navigation links configuration
-const navLinks: NavLink[] = [
-  { label: "Home", href: "/" },
-  { label: "FAQ", href: "/#faq" },
-  { label: "Feature", href: "/#feature" },
-  { label: "Contact", href: "/#contact" },
-];
+import { NAV_LINKS } from "@/lib/constants";
 
 // Main Navbar Layout Component
 export function Navbar() {
@@ -77,7 +71,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <DesktopNav navLinks={navLinks} isScrolled={isScrolled} />
+        <DesktopNav navLinks={NAV_LINKS} isScrolled={isScrolled} />
 
         {/* Right Side Controls */}
         <div className="flex items-center gap-3 shrink-0 justify-self-end col-start-3">
@@ -106,7 +100,7 @@ export function Navbar() {
           </div>
 
           {/* Mobile Menu Toggle with Shadcn Sheet */}
-          <MobileNav navLinks={navLinks} />
+          <MobileNav navLinks={NAV_LINKS} />
         </div>
       </div>
     </header>

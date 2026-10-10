@@ -1,4 +1,12 @@
 import { StepItem, RoleCardItem } from "@/types/how-it-works";
+import { NavLink } from "@/types/navbar";
+
+export const NAV_LINKS: NavLink[] = [
+  { label: "Home", href: "/" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Feature", href: "/#feature" },
+  { label: "Contact", href: "/#contact" },
+];
 
 // Steps data for the How It Works section
 export const HOW_IT_WORKS_STEPS: StepItem[] = [
