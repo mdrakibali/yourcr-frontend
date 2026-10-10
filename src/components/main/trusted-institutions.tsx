@@ -3,27 +3,25 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 const institutions = [
-  // Round/Shield logos (square aspect ratios)
-  { name: "Canadian University", logo: "/assets/institutions/CUB.png", width: 110, height: 70 },
-  { name: "BUET", logo: "/assets/institutions/BUET.png", width: 110, height: 70 },
-  { name: "DU", logo: "/assets/institutions/DU.png", width: 110, height: 70 },
-  { name: "JU", logo: "/assets/institutions/JU.png", width: 110, height: 70 },
-  { name: "SUST", logo: "/assets/institutions/SUST.png", width: 110, height: 70 },
-  // Horizontal/Text logos (wide aspect ratios)
-  { name: "BRAC", logo: "/assets/institutions/brac.png", width: 110, height: 70 },
-  { name: "AIUB", logo: "/assets/institutions/AIUB.png", width: 110, height: 70 },
-  { name: "DIU", logo: "/assets/institutions/DIU.png", width: 110, height: 70 },
-  { name: "EWU", logo: "/assets/institutions/EWU.png", width: 110, height: 70 },
-  { name: "IUB", logo: "/assets/institutions/IUB.png", width: 110, height: 70 },
-  { name: "NSU", logo: "/assets/institutions/NSU.png", width: 110, height: 70 },
+  { name: "Canadian University of Bangladesh", logo: "/assets/institutions/CUB.png" },
+  { name: "BUET", logo: "/assets/institutions/BUET.png" },
+  { name: "University of Dhaka", logo: "/assets/institutions/DU.png" },
+  { name: "Jahangirnagar University", logo: "/assets/institutions/JU.png" },
+  { name: "Shahjalal University", logo: "/assets/institutions/SUST.png" },
+  { name: "BRAC University", logo: "/assets/institutions/brac.png" },
+  { name: "AIUB", logo: "/assets/institutions/AIUB.png" },
+  { name: "Daffodil International University", logo: "/assets/institutions/DIU.png" },
+  { name: "East West University", logo: "/assets/institutions/EWU.png" },
+  { name: "IUB", logo: "/assets/institutions/IUB.png" },
+  { name: "North South University", logo: "/assets/institutions/NSU.png" },
 ];
 
 export function TrustedInstitutions() {
   return (
     <section className="w-full bg-muted/40 py-4 md:py-6 lg:py-8">
       <div className="w-full relative z-10 overflow-hidden">
-        <p className="text-center text-xs md:text-sm font-semibold tracking-widest text-muted-foreground mb-6 px-4">
-          Trusted by students across leading institutions
+        <p className="text-center text-xs md:text-sm font-semibold tracking-widest text-muted-foreground mb-8 px-4">
+          Trusted by students from leading institutions
         </p>
         <Marquee 
           gradient={false} 
@@ -35,16 +33,22 @@ export function TrustedInstitutions() {
           {institutions.map((inst, index) => (
             <div 
               key={`${inst.name}-${index}`} 
-              className="flex justify-center items-center mx-6 md:mx-10 h-20"
+              className="flex items-center group cursor-pointer"
             >
-              <Image
-                src={inst.logo}
-                alt={`${inst.name} Logo`}
-                width={inst.width}
-                height={inst.height}
-                style={{ width: inst.width, height: inst.height }}
-                className="object-contain opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
-              />
+              <div className="flex items-center gap-3 px-8 md:px-12">
+                <Image
+                  src={inst.logo}
+                  alt={`${inst.name} Logo`}
+                  width={48}
+                  height={48}
+                  className="object-contain w-8 h-8 md:w-10 md:h-10 opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                />
+                <span className="text-sm md:text-base  text-muted-foreground group-hover:text-foreground transition-colors whitespace-nowrap">
+                  {inst.name}
+                </span>
+              </div>
+              {/* Vertical Divider */}
+              <div className="w-px h-8 bg-border/60" />
             </div>
           ))}
         </Marquee>
@@ -52,4 +56,3 @@ export function TrustedInstitutions() {
     </section>
   );
 }
-
