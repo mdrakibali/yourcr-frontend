@@ -1,12 +1,12 @@
-import { HeroSection } from "@/components/main/hero-section";
-import { TrustedInstitutions } from "@/components/main/trusted-institutions";
-import { HowItWorksSection } from "@/components/main/how-it-works-section";
-import { FeaturesSection } from "@/components/main/features-section";
-import { MapSection } from "@/components/main/map-section";
-import { TestimonialSection } from "@/components/main/testimonial-section";
-import { FaqSection } from "@/components/main/faq-section";
-import { CtaSection } from "@/components/main/cta-section";
-import { ContactSection } from "@/components/main/contact-section";
+import { HeroSection } from '@/components/main/hero-section';
+import { TrustedInstitutions } from '@/components/main/trusted-institutions';
+import { HowItWorksSection } from '@/components/main/how-it-works-section';
+import { FeaturesSection } from '@/components/main/features-section';
+import { MapSection } from '@/components/main/map-section';
+import { TestimonialSection } from '@/components/main/testimonial-section';
+import { FaqSection } from '@/components/main/faq-section';
+import { CtaSection } from '@/components/main/cta-section';
+import { ContactSection } from '@/components/main/contact-section';
 
 export default function Home() {
   return (

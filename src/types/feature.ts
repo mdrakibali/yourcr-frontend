@@ -1,4 +1,4 @@
-import { LucideIcon } from "lucide-react";
+import { LucideIcon } from 'lucide-react';
 
 export interface Feature {
   title: string;
@@ -9,4 +9,3 @@ export interface Feature {
 export interface FeatureCardProps {
   feature: Feature;
 }
-

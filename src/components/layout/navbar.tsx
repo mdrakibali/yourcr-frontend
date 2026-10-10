@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import { DesktopNav } from "@/components/layout/desktop-nav";
-import { MobileNav } from "@/components/layout/mobile-nav";
-import type { NavLink } from "@/types/navbar";
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import { DesktopNav } from '@/components/layout/desktop-nav';
+import { MobileNav } from '@/components/layout/mobile-nav';
+import type { NavLink } from '@/types/navbar';
 
-import { NAV_LINKS } from "@/lib/constants";
+import { NAV_LINKS } from '@/lib/constants';
 
 // Main Navbar Layout Component
 export function Navbar() {
@@ -17,7 +17,7 @@ export function Navbar() {
 
   // Handle scroll event to trigger glassmorphism effect
   useEffect(() => {
-    const scrollContainer = document.getElementById("main-scroll-container");
+    const scrollContainer = document.getElementById('main-scroll-container');
     if (!scrollContainer) return;
 
     const handleScroll = () => {
@@ -28,44 +28,47 @@ export function Navbar() {
         setIsScrolled(false);
       }
     };
-    
+
     // Check scroll position on mount
     handleScroll();
-    
-    scrollContainer.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleScroll); // Reset if resized to mobile
-    
+
+    scrollContainer.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll); // Reset if resized to mobile
+
     return () => {
-      scrollContainer.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
+      scrollContainer.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
     };
   }, []);
 
   return (
     <header
       className={cn(
-        "fixed top-0 inset-x-0 z-50 transition-all duration-500 ease-in-out",
-        isScrolled ? "pt-2" : "pt-4"
+        'fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-in-out',
+        isScrolled ? 'pt-2' : 'pt-4'
       )}
     >
       <div
         className={cn(
-          "mx-auto w-full transition-all duration-500 ease-in-out h-14",
+          'mx-auto h-14 w-full transition-all duration-500 ease-in-out',
           isScrolled
-            ? "max-w-4xl bg-background/70 backdrop-blur-lg rounded-full px-6 flex items-center justify-between"
-            : "container bg-transparent flex justify-between items-center gap-3"
+            ? 'bg-background/70 flex max-w-4xl items-center justify-between rounded-full px-6 backdrop-blur-lg'
+            : 'container flex items-center justify-between gap-3 bg-transparent'
         )}
       >
         {/* Logo */}
-        <Link href="/" className="flex items-center group min-w-0 shrink-0 justify-self-start">
+        <Link
+          href="/"
+          className="group flex min-w-0 shrink-0 items-center justify-self-start"
+        >
           <Image
             src="/assets/yourcr-logo.png"
             alt="YourCR Logo"
             width={150}
             height={40}
             className={cn(
-              "object-contain transition-all duration-300",
-              isScrolled ? "w-28" : "w-36"
+              'object-contain transition-all duration-300',
+              isScrolled ? 'w-28' : 'w-36'
             )}
           />
         </Link>
@@ -74,28 +77,28 @@ export function Navbar() {
         <DesktopNav navLinks={NAV_LINKS} isScrolled={isScrolled} />
 
         {/* Right Side Controls */}
-        <div className="flex items-center gap-3 shrink-0 justify-self-end col-start-3">
+        <div className="col-start-3 flex shrink-0 items-center gap-3 justify-self-end">
           {/* Auth Buttons */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden items-center gap-3 md:flex">
             <Link href="/login">
-              <Button 
-                variant="ghost" 
-                size={isScrolled ? "sm" : "default"}
+              <Button
+                variant="ghost"
+                size={isScrolled ? 'sm' : 'default'}
                 className={cn(
-                  "font-semibold text-foreground rounded-md border border-border cursor-pointer transition-all duration-300",
-                  isScrolled ? "px-4" : "px-6"
+                  'text-foreground border-border cursor-pointer rounded-md border font-semibold transition-all duration-300',
+                  isScrolled ? 'px-4' : 'px-6'
                 )}
               >
                 Login
               </Button>
             </Link>
             <Link href="/register">
-              <Button 
-                variant="default" 
-                size={isScrolled ? "sm" : "default"}
+              <Button
+                variant="default"
+                size={isScrolled ? 'sm' : 'default'}
                 className={cn(
-                  "rounded-md font-semibold shadow-sm cursor-pointer transition-all duration-300",
-                  isScrolled ? "px-4" : "px-6"
+                  'cursor-pointer rounded-md font-semibold shadow-sm transition-all duration-300',
+                  isScrolled ? 'px-4' : 'px-6'
                 )}
               >
                 Register

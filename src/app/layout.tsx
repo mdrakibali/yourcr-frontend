@@ -3,8 +3,8 @@ import type { Metadata, Viewport } from 'next';
 import { Noto_Sans_Bengali } from 'next/font/google';
 import './globals.css';
 const notoSansBengali = Noto_Sans_Bengali({
-  subsets: ['bengali', 'latin'], 
-  weight: ['300', '400', '500', '600', '700', '800'], 
+  subsets: ['bengali', 'latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
   display: 'swap',
   variable: '--font-sans',
 });
@@ -20,14 +20,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-    >
+    <html lang="en">
       <body
         suppressHydrationWarning
-        className={`${notoSansBengali.variable} font-sans bg-background text-foreground antialiased min-h-screen flex flex-col`}
+        className={`${notoSansBengali.variable} bg-background text-foreground flex min-h-screen flex-col font-sans antialiased`}
       >
-          {children}
+        {children}
       </body>
     </html>
   );

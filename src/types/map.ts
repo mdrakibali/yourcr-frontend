@@ -4,4 +4,3 @@ export interface MapLocation {
   district?: string;
   coordinates: [number, number]; // [longitude, latitude]
 }
-

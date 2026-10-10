@@ -1,7 +1,7 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { ArrowLeft } from "lucide-react";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { ArrowLeft } from 'lucide-react';
 
 export default function AuthLayout({
   children,
@@ -9,27 +9,30 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="h-dvh overflow-y-auto bg-card flex flex-col relative">
+    <div className="bg-card relative flex h-dvh flex-col overflow-y-auto">
       {/* Auth Navbar */}
-      <header className="sticky top-0 z-50 w-full pt-4 bg-card mx-0.5">
-        <div className="container mx-auto h-14 flex items-center justify-between gap-3">
-          <Link href="/" className="flex items-center group min-w-0 shrink-0">
+      <header className="bg-card sticky top-0 z-50 mx-0.5 w-full pt-4">
+        <div className="container mx-auto flex h-14 items-center justify-between gap-3">
+          <Link href="/" className="group flex min-w-0 shrink-0 items-center">
             <Image
               src="/assets/yourcr-logo.png"
               alt="Your CR Logo"
               width={150}
               height={40}
-              className="object-contain w-36"
+              className="w-36 object-contain"
             />
           </Link>
-          <Link href="/" className="flex items-center gap-2 text-gray-500 hover:text-gray-900 transition-colors font-medium text-sm">
-            <ArrowLeft className="w-4 h-4" />
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-sm font-medium text-gray-500 transition-colors hover:text-gray-900"
+          >
+            <ArrowLeft className="h-4 w-4" />
             Back to Home
           </Link>
         </div>
       </header>
       {/* Auth Content */}
-      <main className="flex-1 w-full flex flex-col items-center">
+      <main className="flex w-full flex-1 flex-col items-center">
         {children}
       </main>
     </div>

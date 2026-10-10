@@ -1,43 +1,48 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
+import React from 'react';
+import { Button } from '@/components/ui/button';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { FAQS } from "@/lib/constants";
+} from '@/components/ui/accordion';
+import { FAQS } from '@/lib/constants';
 
 export function FaqSection() {
   return (
-    <section id="faq" className="py-16 md:py-24 bg-card">
-      <div className="container px-4 mx-auto max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+    <section id="faq" className="bg-card py-16 md:py-24">
+      <div className="container mx-auto max-w-6xl px-4">
+        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-16">
           {/* Left Column */}
-          <div className="lg:col-span-5 flex flex-col items-start text-left">
-            <span className="text-primary font-bold text-sm tracking-wide mb-3">
+          <div className="flex flex-col items-start text-left lg:col-span-5">
+            <span className="text-primary mb-3 text-sm font-bold tracking-wide">
               Popular Questions
             </span>
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 leading-tight">
+            <h2 className="text-foreground mb-4 text-2xl leading-tight font-bold md:text-3xl">
               Find Commonly Asked Questions By Users
             </h2>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-6 pr-4">
-              Find answers to your most pressing questions and discover how our platform can transform your learning and teaching journey.
+            <p className="text-muted-foreground mb-6 pr-4 text-sm leading-relaxed">
+              Find answers to your most pressing questions and discover how our
+              platform can transform your learning and teaching journey.
             </p>
-            <Button className="rounded-full px-6 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-none">
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 font-semibold shadow-none">
               Submit Your Question
             </Button>
           </div>
 
           {/* Right Column (Accordion) */}
-          <div className="lg:col-span-7 mt-4 lg:mt-0">
+          <div className="mt-4 lg:col-span-7 lg:mt-0">
             <Accordion type="single" collapsible className="w-full">
               {FAQS.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border-b border-border/40 py-1">
-                  <AccordionTrigger className="text-sm md:text-base font-semibold hover:text-primary hover:no-underline text-left leading-snug pr-4">
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="border-border/40 border-b py-1"
+                >
+                  <AccordionTrigger className="hover:text-primary pr-4 text-left text-sm leading-snug font-semibold hover:no-underline md:text-base">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-sm text-muted-foreground leading-relaxed pt-1 pr-4">
+                  <AccordionContent className="text-muted-foreground pt-1 pr-4 text-sm leading-relaxed">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -49,4 +54,3 @@ export function FaqSection() {
     </section>
   );
 }
-

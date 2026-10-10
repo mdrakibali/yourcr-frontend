@@ -1,20 +1,20 @@
-import React from "react";
-import { FeatureCardProps } from "@/types/feature";
+import React from 'react';
+import { FeatureCardProps } from '@/types/feature';
 
 export function FeatureCard({ feature }: FeatureCardProps) {
   const Icon = feature.icon;
-  
+
   return (
-    <div className="group relative flex items-start gap-3 p-4 md:p-5 bg-card rounded-xl transition-all duration-300 cursor-pointer">
-      <div className="w-10 h-10 shrink-0 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
-        <Icon className="w-4 h-4 text-primary stroke-2" />
+    <div className="group bg-card relative flex cursor-pointer items-start gap-3 rounded-xl p-4 transition-all duration-300 md:p-5">
+      <div className="bg-primary/10 group-hover:bg-primary/20 flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition-all duration-300">
+        <Icon className="text-primary h-4 w-4 stroke-2" />
       </div>
-      
+
       <div className="flex flex-col pt-0.5">
-        <h3 className="text-sm font-semibold text-foreground mb-1">
+        <h3 className="text-foreground mb-1 text-sm font-semibold">
           {feature.title}
         </h3>
-        <p className="text-[13px] text-muted-foreground leading-relaxed pr-2">
+        <p className="text-muted-foreground pr-2 text-[13px] leading-relaxed">
           {feature.description}
         </p>
       </div>

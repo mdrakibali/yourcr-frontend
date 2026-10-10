@@ -92,6 +92,7 @@ Every component file MUST follow this strict top-to-bottom order:
 - **Externalize Icons:** Do not use inline SVGs directly inside page or feature components. Always extract SVGs into a dedicated icon component (e.g., `src/components/shared/icons/<name>.tsx`) and import it. Ensure the SVG accepts standard `IconProps` (`size`, `className`, etc.).
 
 ## 10. Styling, Units & Layouts (Updated Rules)
+
 - **Rem over Px:** Always use `rem` for margins, padding, typography, and spacing to ensure accessibility and scaling. Only use `px` for borders (e.g., `1px solid`) or strict minimums.
 - **Container Class:** Use the custom `.container` class from `globals.css` instead of hardcoding padding. The standard max-width is 1280px with responsive 1rem/2rem side padding.
 - **Route Groups:** Organize routes into logical groups: `(main)`, `(dashboard)`, and `(auth)`. Each group must have its own `layout.tsx` to keep the root `layout.tsx` clean (only for providers and fonts).

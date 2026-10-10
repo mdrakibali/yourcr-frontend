@@ -6,4 +6,3 @@ export interface AuthActionState {
   data?: any;
   timestamp?: number;
 }
-

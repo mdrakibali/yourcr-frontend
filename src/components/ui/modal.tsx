@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import { cn } from "@/lib/utils";
+import * as React from 'react';
+import { cn } from '@/lib/utils';
 
 interface ModalProps {
   isOpen: boolean;
@@ -15,17 +15,14 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div 
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm" 
+      <div
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm"
         onClick={onClose}
       />
-      <div className="relative z-50 w-full max-w-md bg-white rounded-xl shadow-xl p-6 m-4">
-        {title && (
-          <h2 className="text-xl font-bold mb-4">{title}</h2>
-        )}
+      <div className="relative z-50 m-4 w-full max-w-md rounded-xl bg-white p-6 shadow-xl">
+        {title && <h2 className="mb-4 text-xl font-bold">{title}</h2>}
         {children}
       </div>
     </div>
   );
 }
-

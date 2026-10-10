@@ -16,4 +16,3 @@ export interface DesktopNavProps {
   navLinks: NavLink[];
   isScrolled?: boolean;
 }
-

@@ -10,7 +10,6 @@
 
 Built with cutting-edge web technologies to ensure maximum performance, scalability, and an exceptional developer experience:
 
-
 ![Next.js 15](https://img.shields.io/badge/Next.js%2015-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![Cloudflare Workers](https://img.shields.io/badge/Cloudflare_Workers-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
 ![OpenNext](https://img.shields.io/badge/OpenNext-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
@@ -20,16 +19,19 @@ Built with cutting-edge web technologies to ensure maximum performance, scalabil
 ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
 
 ### Core Frameworks & Deployment
+
 - **Framework:** [Next.js 15 (App Router)](https://nextjs.org/)
 - **Deployment Engine:** [Cloudflare Workers](https://workers.cloudflare.com/) & Cloudflare Pages
 - **Serverless Adapter:** [OpenNext](https://opennext.js.org/) (Enables seamless Next.js App Router deployment on Cloudflare)
 
 ### UI & Styling
+
 - **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
 - **UI Components:** [Shadcn UI](https://ui.shadcn.com/) (Accessible, customizable, and headless)
 - **Icons:** [Lucide React](https://lucide.dev/)
 
 ### Language & Tooling
+
 - **Language:** [TypeScript](https://www.typescriptlang.org/) (Strict type safety)
 - **Code Quality:** ESLint & Prettier
 - **Data Validation:** Zod / Yup
@@ -77,17 +79,20 @@ To maintain code quality, all contributors must adhere to these guidelines:
 Follow these steps to run the project locally.
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/rakib/your-cr.git
 cd your-cr
 ```
 
 ### 2. Install dependencies
+
 ```bash
 npm install
 ```
 
 ### 3. Run the development server
+
 ```bash
 npm run dev
 ```
@@ -95,7 +100,9 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
 ### 4. Cloudflare Local Preview (OpenNext)
+
 To test the Cloudflare Workers build locally:
+
 ```bash
 npm run preview
 ```

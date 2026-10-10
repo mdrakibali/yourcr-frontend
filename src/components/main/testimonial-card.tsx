@@ -1,14 +1,14 @@
-import React from "react";
-import Image from "next/image";
-import { TestimonialCardProps } from "@/types/testimonial";
+import React from 'react';
+import Image from 'next/image';
+import { TestimonialCardProps } from '@/types/testimonial';
 
 export function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
-    <div className="break-inside-avoid mb-4 md:mb-6 bg-background rounded-xl p-4 md:p-5 transition-all duration-300 flex flex-col cursor-pointer">
+    <div className="bg-background mb-4 flex cursor-pointer break-inside-avoid flex-col rounded-xl p-4 transition-all duration-300 md:mb-6 md:p-5">
       {testimonial.company && (
-        <div className="flex items-center gap-2.5 mb-4 text-foreground font-semibold text-[15px]">
-          {testimonial.companyLogo?.startsWith("/") ? (
-            <div className="relative w-5 h-5 shrink-0">
+        <div className="text-foreground mb-4 flex items-center gap-2.5 text-[15px] font-semibold">
+          {testimonial.companyLogo?.startsWith('/') ? (
+            <div className="relative h-5 w-5 shrink-0">
               <Image
                 src={testimonial.companyLogo}
                 alt={testimonial.company}
@@ -17,31 +17,31 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
               />
             </div>
           ) : (
-            <div className="w-4 h-4 shrink-0 rounded-full bg-primary/20 flex items-center justify-center text-primary overflow-hidden">
-              <div className="w-2 h-2 rounded-full bg-primary" />
+            <div className="bg-primary/20 text-primary flex h-4 w-4 shrink-0 items-center justify-center overflow-hidden rounded-full">
+              <div className="bg-primary h-2 w-2 rounded-full" />
             </div>
           )}
           <span className="truncate">{testimonial.company}</span>
         </div>
       )}
-      
-      <p className="text-muted-foreground leading-relaxed grow text-[13px] md:text-[14px]">
+
+      <p className="text-muted-foreground grow text-[13px] leading-relaxed md:text-[14px]">
         {testimonial.text}
-      </p>    
+      </p>
       <div className="mt-5 flex items-center gap-3">
-        <div className="relative w-8 h-8 rounded-full overflow-hidden shrink-0 bg-muted">
-          <Image 
-            src={testimonial.avatar} 
-            alt={testimonial.author} 
-            fill 
+        <div className="bg-muted relative h-8 w-8 shrink-0 overflow-hidden rounded-full">
+          <Image
+            src={testimonial.avatar}
+            alt={testimonial.author}
+            fill
             className="object-cover"
           />
         </div>
-        <div className="flex flex-col min-w-0">
-          <span className="text-[13px] font-semibold text-foreground truncate">
+        <div className="flex min-w-0 flex-col">
+          <span className="text-foreground truncate text-[13px] font-semibold">
             {testimonial.author}
           </span>
-          <span className="text-[11px] text-muted-foreground truncate">
+          <span className="text-muted-foreground truncate text-[11px]">
             {testimonial.role}
           </span>
         </div>

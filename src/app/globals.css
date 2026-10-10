@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
 
 @theme inline {
   /* --- 1. Surfaces & Backgrounds --- */
@@ -33,7 +33,7 @@
 
   /* --- 5. Custom Brand Colors (Landing Page) --- */
   --color-brand-orange: #f37c20; /* "Future of Education" highlight */
-  --color-brand-teal: #007B88;
+  --color-brand-teal: #007b88;
 
   /* --- 6. Custom Pastel Colors (Dashboard Course Cards) --- */
   --color-pastel-blue: var(--pastel-blue);
@@ -47,7 +47,7 @@
   --radius-sm: calc(var(--radius) - 4px);
   --shadow-popover: 0 0 20px 5px rgba(0, 0, 0, 0.12);
   /* --- 8. Typography --- */
-  --font-sans: var(--font-sans), "Noto Sans Bengali", sans-serif;
+  --font-sans: var(--font-sans), 'Noto Sans Bengali', sans-serif;
 }
 
 @layer base {
@@ -55,15 +55,15 @@
     /* --- Light Mode (Clean & Modern Dashboard) --- */
     --background: #f4f6f8; /* Dashboard canvas (halka gray) */
     --foreground: #0f172a; /* Dark text */
-    
+
     --card: #ffffff;
     --card-foreground: #0f172a;
-    
+
     --popover: #ffffff;
     --popover-foreground: #0f172a;
 
     /* Primary: Dark Teal (Landing Page) */
-    --primary: #007B88;
+    --primary: #007b88;
     --primary-foreground: #ffffff;
 
     /* Secondary: Soft gray/blue for secondary buttons */
@@ -81,13 +81,13 @@
     /* Destructive: For delete/error buttons */
     --destructive: #ef4444;
     --destructive-foreground: #ffffff;
-    
+
     --placeholder: #94a3b8;
 
     /* Borders & Rings */
-    --border: #007B88;
+    --border: #007b88;
     --input: #e2e8f0;
-    --ring: #007B88; /* Input focus korলে Teal color */
+    --ring: #007b88; /* Input focus korলে Teal color */
 
     /* Pastel Backgrounds for Dashboard Cards */
     --pastel-blue: #ebf4ff;
@@ -103,10 +103,10 @@
     /* --- Tinted Dark Mode (Premium Greenish-Teal Look) --- */
     --background: #152522; /* Main dark greenish background */
     --foreground: #f8fafc; /* Off-white text */
-    
+
     --card: #1c322e; /* Floating card background */
     --card-foreground: #f8fafc;
-    
+
     --popover: #1c322e; /* Dropdown menus */
     --popover-foreground: #f8fafc;
 
@@ -129,7 +129,7 @@
     /* Destructive */
     --destructive: #ef4444;
     --destructive-foreground: #ffffff;
-    
+
     --placeholder: #738a86;
 
     /* Borders & Rings */

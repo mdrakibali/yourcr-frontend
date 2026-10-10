@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // Represents a step in the how it works section
 export interface StepItem {
@@ -28,4 +28,3 @@ export interface StepCardProps {
 export interface RoleCardProps {
   card: RoleCardItem;
 }
-

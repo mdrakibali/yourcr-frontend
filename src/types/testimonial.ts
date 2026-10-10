@@ -10,4 +10,3 @@ export interface Testimonial {
 export interface TestimonialCardProps {
   testimonial: Testimonial;
 }
-
