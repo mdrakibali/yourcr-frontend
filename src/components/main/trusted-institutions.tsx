@@ -2,19 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
-const institutions = [
-  { name: "Canadian University of Bangladesh", logo: "/assets/institutions/CUB.png" },
-  { name: "BUET", logo: "/assets/institutions/BUET.png" },
-  { name: "University of Dhaka", logo: "/assets/institutions/DU.png" },
-  { name: "Jahangirnagar University", logo: "/assets/institutions/JU.png" },
-  { name: "Shahjalal University", logo: "/assets/institutions/SUST.png" },
-  { name: "BRAC University", logo: "/assets/institutions/brac.png" },
-  { name: "AIUB", logo: "/assets/institutions/AIUB.png" },
-  { name: "Daffodil International University", logo: "/assets/institutions/DIU.png" },
-  { name: "East West University", logo: "/assets/institutions/EWU.png" },
-  { name: "IUB", logo: "/assets/institutions/IUB.png" },
-  { name: "North South University", logo: "/assets/institutions/NSU.png" },
-];
+import { TRUSTED_INSTITUTIONS } from "@/lib/constants";
 
 export function TrustedInstitutions() {
   return (
@@ -30,7 +18,7 @@ export function TrustedInstitutions() {
           pauseOnHover={true}
           className="overflow-hidden"
         >
-          {institutions.map((inst, index) => (
+          {TRUSTED_INSTITUTIONS.map((inst, index) => (
             <div 
               key={`${inst.name}-${index}`} 
               className="flex items-center group cursor-pointer"

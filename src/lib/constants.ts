@@ -57,10 +57,57 @@ export const HOW_IT_WORKS_ROLE_CARDS: RoleCardItem[] = [
 import { MapLocation } from "@/types/map";
 
 export const INSTITUTION_LOCATIONS: MapLocation[] = [
-  { id: "1", name: "Dhaka University", district: "Dhaka", coordinates: [90.3959, 23.7323] },
-  { id: "2", name: "BUET", district: "Dhaka", coordinates: [90.3927, 23.7266] },
+  // Original ones outside Dhaka
   { id: "3", name: "Rajshahi University", district: "Rajshahi", coordinates: [88.6366, 24.3698] },
   { id: "4", name: "Chittagong University", district: "Chattogram", coordinates: [91.7825, 22.4705] },
-  { id: "5", name: "Sylhet Agricultural Univ.", district: "Sylhet", coordinates: [91.9022, 24.9048] },
-  { id: "6", name: "Khulna University", district: "Khulna", coordinates: [89.5403, 22.8020] }
+  { id: "6", name: "Khulna University", district: "Khulna", coordinates: [89.5403, 22.8020] },
+  
+  // From trusted-institutions.tsx
+  { id: "1", name: "University of Dhaka (DU)", district: "Dhaka", coordinates: [90.3929, 23.7340] },
+  { id: "2", name: "Bangladesh University of Engineering and Technology (BUET)", district: "Dhaka", coordinates: [90.3923, 23.7265] },
+  { id: "5", name: "Shahjalal University of Science and Technology (SUST)", district: "Sylhet", coordinates: [91.8315, 24.9221] },
+  { id: "7", name: "Canadian University of Bangladesh (CUB)", district: "Dhaka", coordinates: [90.4071, 23.8223] },
+  { id: "8", name: "Jahangirnagar University (JU)", district: "Dhaka", coordinates: [90.2690, 23.8814] },
+  { id: "9", name: "BRAC University", district: "Dhaka", coordinates: [90.4286, 23.7801] },
+  { id: "10", name: "American International University-Bangladesh (AIUB)", district: "Dhaka", coordinates: [90.4262, 23.8221] },
+  { id: "11", name: "Daffodil International University (DIU)", district: "Dhaka", coordinates: [90.3201, 23.8769] },
+  { id: "12", name: "East West University (EWU)", district: "Dhaka", coordinates: [90.4293, 23.7689] },
+  { id: "13", name: "Independent University, Bangladesh (IUB)", district: "Dhaka", coordinates: [90.4277, 23.8153] },
+  { id: "14", name: "North South University (NSU)", district: "Dhaka", coordinates: [90.4278, 23.8158] },
+  // Added to fill map
+  { id: "15", name: "Bangladesh Agricultural University (BAU)", district: "Mymensingh", coordinates: [90.4357, 24.7214] },
+  { id: "16", name: "University of Barishal", district: "Barishal", coordinates: [90.3524, 22.6565] },
+  { id: "17", name: "Begum Rokeya University, Rangpur", district: "Rangpur", coordinates: [89.2618, 25.7262] },
+  { id: "18", name: "Comilla University", district: "Cumilla", coordinates: [91.1352, 23.419] },
+  { id: "19", name: "Noakhali Science and Technology University (NSTU)", district: "Noakhali", coordinates: [91.1009, 22.7937] },
+  { id: "20", name: "Bangabandhu Sheikh Mujib Medical College (BSMMC)", district: "Faridpur", coordinates: [89.8437, 23.5934] },
+  { id: "21", name: "Shaheed Ziaur Rahman Medical College (SZMC)", district: "Bogura", coordinates: [89.3516, 24.8197] },
+  { id: "22", name: "Mawlana Bhashani Science and Technology University (MBSTU)", district: "Tangail", coordinates: [89.8893, 24.2388] },
+  { id: "23", name: "Patuakhali Science and Technology University (PSTU)", district: "Patuakhali", coordinates: [90.38, 22.4639] },
+  { id: "24", name: "Pabna University of Science and Technology (PUST)", district: "Pabna", coordinates: [89.2789, 24.0048] },
+  { id: "25", name: "Jashore University of Science and Technology (JUST)", district: "Jashore", coordinates: [89.1491, 23.2327] },
+  { id: "26", name: "Hajee Mohammad Danesh Science and Technology University (HSTU)", district: "Dinajpur", coordinates: [88.6534, 25.5788] },
+  { id: "27", name: "Bangabandhu Sheikh Mujibur Rahman Science and Technology University", district: "Gopalganj", coordinates: [89.8168, 22.9642] },
+  { id: "28", name: "Rangamati Science and Technology University (RMSTU)", district: "Rangamati", coordinates: [92.1746, 22.6247] },
+  { id: "29", name: "Islamic University, Bangladesh", district: "Kushtia", coordinates: [89.15, 23.7196] },
+  { id: "30", name: "Cox's Bazar Medical College", district: "Cox's Bazar", coordinates: [92.0003, 21.4322] },
+  { id: "31", name: "Khulna University of Engineering & Technology (KUET)", district: "Khulna", coordinates: [89.502, 22.9005] },
+  { id: "32", name: "Rajshahi University of Engineering & Technology (RUET)", district: "Rajshahi", coordinates: [88.6283, 24.3703] },
+  { id: "33", name: "Chittagong University of Engineering & Technology (CUET)", district: "Chattogram", coordinates: [91.9701, 22.4616] },
+  { id: "34", name: "Islamic University of Technology (IUT)", district: "Gazipur", coordinates: [90.3789, 23.9482] },
+  { id: "35", name: "Bangabandhu Sheikh Mujibur Rahman Agricultural University", district: "Gazipur", coordinates: [90.4079, 24.0373] },
+];
+
+export const TRUSTED_INSTITUTIONS = [
+  { name: "Canadian University of Bangladesh", logo: "/assets/institutions/CUB.png" },
+  { name: "BUET", logo: "/assets/institutions/BUET.png" },
+  { name: "University of Dhaka", logo: "/assets/institutions/DU.png" },
+  { name: "Jahangirnagar University", logo: "/assets/institutions/JU.png" },
+  { name: "Shahjalal University", logo: "/assets/institutions/SUST.png" },
+  { name: "BRAC University", logo: "/assets/institutions/brac.png" },
+  { name: "AIUB", logo: "/assets/institutions/AIUB.png" },
+  { name: "Daffodil International University", logo: "/assets/institutions/DIU.png" },
+  { name: "East West University", logo: "/assets/institutions/EWU.png" },
+  { name: "IUB", logo: "/assets/institutions/IUB.png" },
+  { name: "North South University", logo: "/assets/institutions/NSU.png" },
 ];
