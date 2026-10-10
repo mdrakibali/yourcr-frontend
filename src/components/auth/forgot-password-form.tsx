@@ -38,14 +38,14 @@ const ForgotPasswordForm = () => {
 
         <Button
           type="submit"
-          className="w-full h-10 text-sm font-bold bg-primary hover:bg-primary/90 text-white rounded-md transition-all active:scale-[0.98] cursor-pointer disabled:opacity-70"
+          className="w-full h-10 text-[13px] font-bold bg-primary hover:bg-primary/90 text-white rounded-md transition-all active:scale-[0.98] cursor-pointer disabled:opacity-70"
           disabled={isPending}
         >
           {isPending ? "Sending..." : "Send Reset Link"}
         </Button>
       </form>
 
-      <p className="mt-8 text-center text-sm text-gray-600">
+      <p className="mt-8 text-center text-xs text-gray-600">
         Remember your password?{" "}
         <Link href="/login" className="font-bold text-primary hover:underline">
           Sign In

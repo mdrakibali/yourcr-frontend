@@ -11,10 +11,10 @@ const RegisterPage = () => {
     <section className="w-full flex justify-center items-center min-h-[calc(100vh-70px)] px-6 py-12 lg:px-20 xl:px-24">
       <div className="mx-auto w-full max-w-lg bg-card border border-gray-200 rounded-lg p-6">
         <div className="mb-8 text-center">
-          <h1 className="mb-2 text-2xl leading-tight tracking-tight text-gray-900">
+          <h1 className="mb-2 text-xl leading-tight tracking-tight text-gray-900">
             Create an Account
           </h1>
-          <p className="text-xs text-gray-600">
+          <p className="text-xs text-gray-500">
             Join Your CR to manage your classes, schedules, and announcements effectively.
           </p>
         </div>

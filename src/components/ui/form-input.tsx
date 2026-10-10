@@ -11,7 +11,7 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
 
     return (
       <div className="flex flex-col gap-1.5 w-full">
-        <Label htmlFor={id} className={cn("text-[13px] font-medium text-gray-700")}>
+        <Label htmlFor={id} className={cn("text-xs text-gray-700")}>
           {label}
         </Label>
         <div className="relative">

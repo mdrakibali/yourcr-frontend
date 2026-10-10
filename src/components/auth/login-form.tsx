@@ -75,11 +75,11 @@ const LoginForm = () => {
             <Clock className="size-8" />
           </div>
 
-          <h3 className="text-xl font-bold text-gray-900 mb-3">
+          <h3 className="text-lg font-bold text-gray-900 mb-3">
             Application Under Review
           </h3>
 
-          <p className="text-gray-500 text-sm leading-relaxed mb-8 px-2">
+          <p className="text-gray-500 text-xs leading-relaxed mb-8 px-2">
             Your CR registration has been successfully received. Our team is
             currently verifying your documents. You will receive an email
             confirmation once the review process is complete.
@@ -88,7 +88,7 @@ const LoginForm = () => {
           <div className="w-full pt-2">
             <Button
               onClick={() => setIsPendingModalOpen(false)}
-              className="w-full h-10 text-sm bg-primary cursor-pointer text-white font-semibold rounded-md transition-all active:scale-[0.98]"
+              className="w-full h-10 text-[13px] bg-primary cursor-pointer text-white font-semibold rounded-md transition-all active:scale-[0.98]"
             >
               Continue
             </Button>
@@ -131,14 +131,14 @@ const LoginForm = () => {
             />
             <Label
               htmlFor="remember"
-              className="text-sm font-medium text-gray-600 cursor-pointer select-none"
+              className="text-xs font-medium text-gray-600 cursor-pointer select-none"
             >
               Keep me signed in
             </Label>
           </div>
           <Link
             href="/forgot-password"
-            className="text-xs font-bold text-primary hover:text-primary/80 transition-colors"
+            className="text-xs font-medium text-primary hover:text-primary/80 transition-colors"
           >
             Forgot Password?
           </Link>
@@ -146,7 +146,7 @@ const LoginForm = () => {
 
         <Button
           type="submit"
-          className="w-full h-10 text-sm font-bold bg-primary hover:bg-primary/90 text-white rounded-md transition-all active:scale-[0.98] cursor-pointer disabled:opacity-70"
+          className="w-full h-10 text-[13px] font-bold bg-primary hover:bg-primary/90 text-white rounded-md transition-all active:scale-[0.98] cursor-pointer disabled:opacity-70"
           disabled={isPending}
         >
           {isPending ? (
@@ -169,12 +169,12 @@ const LoginForm = () => {
       
       {/* Social Login Buttons (Mock) */}
       <div className="mt-6 flex flex-col gap-3">
-        <Button variant="outline" className="w-full h-10 text-sm border-gray-200 text-gray-700 font-semibold hover:bg-gray-50">
+        <Button variant="outline" className="w-full h-10 text-[13px] border-gray-200 text-gray-700 font-semibold hover:bg-gray-50">
           Google
         </Button>
       </div>
 
-      <p className="mt-8 text-center text-sm text-gray-600">
+      <p className="mt-8 text-center text-xs text-gray-600">
         Don't have an account?{" "}
         <Link href="/register" className="font-bold text-primary hover:underline">
           Register here

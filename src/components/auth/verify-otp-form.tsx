@@ -36,7 +36,7 @@ const VerifyOtpForm = () => {
 
         <Button
           type="submit"
-          className="w-full h-10 text-sm font-bold bg-primary hover:bg-primary/90 text-white rounded-md transition-all active:scale-[0.98] cursor-pointer disabled:opacity-70"
+          className="w-full h-10 text-[13px] font-bold bg-primary hover:bg-primary/90 text-white rounded-md transition-all active:scale-[0.98] cursor-pointer disabled:opacity-70"
           disabled={isPending}
         >
           {isPending ? "Verifying..." : "Verify OTP"}

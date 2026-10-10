@@ -66,7 +66,7 @@ const RegisterForm = () => {
         </div>
         <Button
           type="submit"
-          className="w-full h-10 text-sm font-bold bg-primary hover:bg-primary/90 text-white rounded-md transition-all active:scale-[0.98] cursor-pointer disabled:opacity-70"
+          className="w-full h-10 text-[13px] font-bold bg-primary hover:bg-primary/90 text-white rounded-md transition-all active:scale-[0.98] cursor-pointer disabled:opacity-70"
           disabled={isPending}
         >
           {isPending ? "Creating Account..." : "Create Account"}
@@ -80,12 +80,12 @@ const RegisterForm = () => {
       </div>
       
       <div className="mt-6 flex flex-col gap-3">
-        <Button variant="outline" className="w-full h-10 text-sm border-gray-200 text-gray-700 font-semibold hover:bg-gray-50">
+        <Button variant="outline" className="w-full h-10 text-[13px] border-gray-200 text-gray-700 font-semibold hover:bg-gray-50">
           Google
         </Button>
       </div>
 
-      <p className="mt-8 text-center text-sm text-gray-600">
+      <p className="mt-8 text-center text-xs text-gray-600">
         Already have an account?{" "}
         <Link href="/login" className="font-bold text-primary hover:underline">
           Sign In here
