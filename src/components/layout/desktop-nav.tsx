@@ -2,17 +2,18 @@
 import React from "react";
 import { NavItem } from "@/components/layout/nav-item";
 import type { DesktopNavProps } from "@/types/navbar";
+import { cn } from "@/lib/utils";
 
 // Desktop navigation list
-export function DesktopNav({ navLinks }: DesktopNavProps) {
+export function DesktopNav({ navLinks, isScrolled }: DesktopNavProps) {
   return (
-    <nav className="hidden md:flex items-center gap-8">
+    <nav className={cn("hidden md:flex items-center transition-all duration-300", isScrolled ? "gap-6" : "gap-8")}>
       {navLinks.map((link) => (
         <NavItem
           key={link.label}
           href={link.href}
           label={link.label}
-          className="text-sm"
+          className={cn("transition-all duration-300", isScrolled ? "text-sm" : "text-base")}
         />
       ))}
     </nav>

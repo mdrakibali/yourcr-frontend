@@ -36,15 +36,15 @@ export function HeroSection() {
         </div>
 
         {/* Dashboard Mockup Image */}
-        <div className="w-full max-w-5xl mx-auto mt-12 sm:mt-16 relative">
+        <div className="w-full max-w-4xl mx-auto mt-12 sm:mt-16 relative">
           <div className="relative rounded-xl sm:rounded-2xl border border-border/50 shadow-2xl overflow-hidden bg-muted">
              <Image
                 src="/assets/hero-mockup.png"
                 alt="Your CR Dashboard Mockup"
                 width={1200}
-                height={800}
+                height={500}
                 priority
-                className="w-full h-auto object-cover object-top"
+                className="w-full h-auto object-contain"
              />
           </div>
         </div>

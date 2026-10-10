@@ -23,15 +23,18 @@ export function Navbar() {
 
   // Handle scroll event to trigger glassmorphism effect
   useEffect(() => {
+    const scrollContainer = document.getElementById("main-scroll-container");
+    if (!scrollContainer) return;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(scrollContainer.scrollTop > 20);
     };
     
     // Check scroll position on mount
     handleScroll();
     
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    scrollContainer.addEventListener("scroll", handleScroll);
+    return () => scrollContainer.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -45,7 +48,7 @@ export function Navbar() {
         className={cn(
           "mx-auto flex items-center justify-between transition-all duration-500 ease-in-out",
           isScrolled
-            ? "max-w-4xl bg-background/70 backdrop-blur-lg shadow-sm border border-border rounded-full py-2 px-6"
+            ? "max-w-4xl bg-background/70 backdrop-blur-lg rounded-full py-2 px-6"
             : "container bg-transparent py-4"
         )}
       >
@@ -55,20 +58,37 @@ export function Navbar() {
             src="/assets/yourcr-logo.png"
             alt="YourCR Logo"
             width={150}
-            height={80}
-            className="object-contain transition-transform duration-300"
+            height={40}
+            className={cn(
+              "object-contain transition-all duration-300",
+              isScrolled ? "w-28" : "w-36"
+            )}
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <DesktopNav navLinks={navLinks} />
+        <DesktopNav navLinks={navLinks} isScrolled={isScrolled} />
 
         {/* Auth Buttons */}
-        <div className="hidden md:flex items-center gap-4">
-          <Button variant="ghost" className="font-semibold text-foreground rounded-md px-6 border border-border cursor-pointer">
+        <div className="hidden md:flex items-center gap-3">
+          <Button 
+            variant="ghost" 
+            size={isScrolled ? "sm" : "default"}
+            className={cn(
+              "font-semibold text-foreground rounded-md border border-border cursor-pointer transition-all duration-300",
+              isScrolled ? "px-4" : "px-6"
+            )}
+          >
             Login
           </Button>
-          <Button variant="default" className="rounded-md px-6 font-semibold shadow-sm cursor-pointer">
+          <Button 
+            variant="default" 
+            size={isScrolled ? "sm" : "default"}
+            className={cn(
+              "rounded-md font-semibold shadow-sm cursor-pointer transition-all duration-300",
+              isScrolled ? "px-4" : "px-6"
+            )}
+          >
             Register
           </Button>
         </div>

@@ -14,5 +14,6 @@ export interface MobileNavProps {
 
 export interface DesktopNavProps {
   navLinks: NavLink[];
+  isScrolled?: boolean;
 }
 
